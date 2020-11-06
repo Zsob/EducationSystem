@@ -93,14 +93,12 @@
     <Compile Include="DesktopForm.Designer.cs">
       <DependentUpon>DesktopForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="AnnouncementMessage.cs" />
     <Compile Include="ExamRegistration.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ExamRegistration.Designer.cs">
       <DependentUpon>ExamRegistration.cs</DependentUpon>
     </Compile>
-    <Compile Include="ExchangeStudentInformation.cs" />
     <Compile Include="LogIn.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -112,6 +110,12 @@
     </Compile>
     <Compile Include="PracticeLink.Designer.cs">
       <DependentUpon>PracticeLink.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SignUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SignUp.Designer.cs">
+      <DependentUpon>SignUp.cs</DependentUpon>
     </Compile>
     <Compile Include="StudentGrade.cs">
       <SubType>Form</SubType>
@@ -154,6 +158,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PracticeLink.resx">
       <DependentUpon>PracticeLink.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SignUp.resx">
+      <DependentUpon>SignUp.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="StudentGrade.resx">
       <DependentUpon>StudentGrade.cs</DependentUpon>

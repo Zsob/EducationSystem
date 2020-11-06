@@ -37,6 +37,7 @@
             this.bt_Evaluation = new System.Windows.Forms.Button();
             this.btn_LogIn = new System.Windows.Forms.Button();
             this.btn_LogOut = new System.Windows.Forms.Button();
+            this.btn_Refresh = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textBox_Acountment
@@ -127,12 +128,24 @@
             this.btn_LogOut.TabIndex = 8;
             this.btn_LogOut.Text = "注销";
             this.btn_LogOut.UseVisualStyleBackColor = true;
+            this.btn_LogOut.Click += new System.EventHandler(this.btn_LogOut_Click);
+            // 
+            // btn_Refresh
+            // 
+            this.btn_Refresh.Location = new System.Drawing.Point(487, 37);
+            this.btn_Refresh.Name = "btn_Refresh";
+            this.btn_Refresh.Size = new System.Drawing.Size(84, 27);
+            this.btn_Refresh.TabIndex = 9;
+            this.btn_Refresh.Text = "刷新";
+            this.btn_Refresh.UseVisualStyleBackColor = true;
+            this.btn_Refresh.Click += new System.EventHandler(this.btn_Refresh_Click);
             // 
             // Form_System
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1049, 620);
+            this.Controls.Add(this.btn_Refresh);
             this.Controls.Add(this.btn_LogOut);
             this.Controls.Add(this.btn_LogIn);
             this.Controls.Add(this.bt_Evaluation);
@@ -160,6 +173,7 @@
         private System.Windows.Forms.Button bt_Evaluation;
         private System.Windows.Forms.Button btn_LogIn;
         private System.Windows.Forms.Button btn_LogOut;
+        private System.Windows.Forms.Button btn_Refresh;
     }
 }
 

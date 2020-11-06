@@ -8,20 +8,18 @@ namespace Education_System
 {
     class Student
     {
-        public string Account;
+        public string StudentNo;
         public string Name;
         public string Password;
         public string FirstQuestion;
         public string SecondQuestion;
         public string FirstAnswer;
         public string SecondAnswer;
-        public Student(string Account, string Name,string Password)
+        public Student(string StudentNo)
         {
-            this.Account = Account;
-            this.Name = Name;
-            this.Password = Password;
+            this.StudentNo = StudentNo;
         }
-        public static  Student  newStudent= new Student("3190707011", "曾极涵","123");
+        public static Student newStudent = new Student("未登录");
 
     }
 }

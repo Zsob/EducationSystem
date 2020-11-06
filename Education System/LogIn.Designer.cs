@@ -77,6 +77,7 @@
             this.btn_LogIn.TabIndex = 4;
             this.btn_LogIn.Text = "登录";
             this.btn_LogIn.UseVisualStyleBackColor = true;
+            this.btn_LogIn.Click += new System.EventHandler(this.btn_LogIn_Click);
             // 
             // btn_SignUp
             // 
@@ -86,6 +87,7 @@
             this.btn_SignUp.TabIndex = 5;
             this.btn_SignUp.Text = "注册";
             this.btn_SignUp.UseVisualStyleBackColor = true;
+            this.btn_SignUp.Click += new System.EventHandler(this.btn_SignUp_Click);
             // 
             // LogIn
             // 

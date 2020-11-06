@@ -54,7 +54,7 @@ namespace Education_System
 
         private void buttonStudentStatusManagement_Click(object sender, EventArgs e)
         {
-            ExchangeStudentInformation exchangeStudentInformation = ExchangeStudentInformation.exchangeStudent;
+            
 
                 MessageBox.Show("必选项未选！");
             

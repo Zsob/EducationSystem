@@ -17,15 +17,8 @@ namespace Education_System
             InitializeComponent();
             this.StartPosition = FormStartPosition.CenterScreen;
             Student student = Student.newStudent;
-            textBox_Accounment.Text =textBox_Account.Text= student.Account;
-            foreach (var announcement in AnnouncementMessage.newAnnouncementMessage.Announcement)
-            {
-                listBoxAnnouncement.Items.Add(announcement);
-            }
-            foreach (var message in AnnouncementMessage.newAnnouncementMessage.Message)
-            {
-                listBoxMessage.Items.Add(message);
-            }
+            textBox_Accounment.Text =textBox_Account.Text= student.StudentNo;
+            
         }
 
         private void button_SavePassword_Click(object sender, EventArgs e)

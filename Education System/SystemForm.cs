@@ -17,6 +17,7 @@ namespace Education_System
         {
             InitializeComponent();
             this.StartPosition = FormStartPosition.CenterScreen;
+            textBox_Acountment.Text = Student.newStudent.StudentNo;
             if(textBox_Acountment.Text=="未登录")
             {
                 bt_Desktop.Enabled = bt_Evaluation.Enabled = bt_ExamRegistration.Enabled = bt_Grade.Enabled = bt_Management.Enabled = bt_Practice.Enabled=btn_LogOut.Enabled = false;
@@ -63,6 +64,25 @@ namespace Education_System
         {
             LogIn logIn = new LogIn();
             logIn.Show();
+        }
+
+        private void btn_Refresh_Click(object sender, EventArgs e)
+        {
+            textBox_Acountment.Text = Student.newStudent.StudentNo;
+            if (textBox_Acountment.Text == "未登录")
+            {
+                bt_Desktop.Enabled = bt_Evaluation.Enabled = bt_ExamRegistration.Enabled = bt_Grade.Enabled = bt_Management.Enabled = bt_Practice.Enabled = btn_LogOut.Enabled = false;
+            }
+            else
+            {
+                bt_Desktop.Enabled = bt_Evaluation.Enabled = bt_ExamRegistration.Enabled = bt_Grade.Enabled = bt_Management.Enabled = bt_Practice.Enabled = btn_LogOut.Enabled = true;
+            }
+        }
+
+        private void btn_LogOut_Click(object sender, EventArgs e)
+        {
+            textBox_Acountment.Text = Student.newStudent.StudentNo = "未登录";
+            bt_Desktop.Enabled = bt_Evaluation.Enabled = bt_ExamRegistration.Enabled = bt_Grade.Enabled = bt_Management.Enabled = bt_Practice.Enabled = btn_LogOut.Enabled = false;
         }
     }
 }
