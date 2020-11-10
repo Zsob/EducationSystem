@@ -28,3 +28,7 @@ VALUES
 (   '3190707011', -- No - char(10)
     '11'  -- Password - varchar(20)
     )
+
+SELECT
+	*
+	FROM dbo.tb_Student;
