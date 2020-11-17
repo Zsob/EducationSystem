@@ -30,7 +30,6 @@
         {
             this.tabControlDesktop = new System.Windows.Forms.TabControl();
             this.tabPage_Announce = new System.Windows.Forms.TabPage();
-            this.listBoxAnnouncement = new System.Windows.Forms.ListBox();
             this.tabPage_Message = new System.Windows.Forms.TabPage();
             this.listBoxMessage = new System.Windows.Forms.ListBox();
             this.tabPage_SecurityQuestion = new System.Windows.Forms.TabPage();
@@ -65,12 +64,14 @@
             this.textBox_Accounment = new System.Windows.Forms.TextBox();
             this.tabPage_WeeklyCalendar = new System.Windows.Forms.TabPage();
             this.TeachingmonthCalendar = new System.Windows.Forms.MonthCalendar();
+            this.dgv_Message = new System.Windows.Forms.DataGridView();
             this.tabControlDesktop.SuspendLayout();
             this.tabPage_Announce.SuspendLayout();
             this.tabPage_Message.SuspendLayout();
             this.tabPage_SecurityQuestion.SuspendLayout();
             this.tabPage_ChangeCode.SuspendLayout();
             this.tabPage_WeeklyCalendar.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Message)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControlDesktop
@@ -89,7 +90,7 @@
             // 
             // tabPage_Announce
             // 
-            this.tabPage_Announce.Controls.Add(this.listBoxAnnouncement);
+            this.tabPage_Announce.Controls.Add(this.dgv_Message);
             this.tabPage_Announce.Location = new System.Drawing.Point(4, 25);
             this.tabPage_Announce.Name = "tabPage_Announce";
             this.tabPage_Announce.Padding = new System.Windows.Forms.Padding(3);
@@ -97,15 +98,6 @@
             this.tabPage_Announce.TabIndex = 0;
             this.tabPage_Announce.Text = "已收公告";
             this.tabPage_Announce.UseVisualStyleBackColor = true;
-            // 
-            // listBoxAnnouncement
-            // 
-            this.listBoxAnnouncement.FormattingEnabled = true;
-            this.listBoxAnnouncement.ItemHeight = 15;
-            this.listBoxAnnouncement.Location = new System.Drawing.Point(6, 6);
-            this.listBoxAnnouncement.Name = "listBoxAnnouncement";
-            this.listBoxAnnouncement.Size = new System.Drawing.Size(756, 394);
-            this.listBoxAnnouncement.TabIndex = 0;
             // 
             // tabPage_Message
             // 
@@ -421,6 +413,15 @@
             this.TeachingmonthCalendar.Name = "TeachingmonthCalendar";
             this.TeachingmonthCalendar.TabIndex = 0;
             // 
+            // dgv_Message
+            // 
+            this.dgv_Message.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_Message.Location = new System.Drawing.Point(0, 0);
+            this.dgv_Message.Name = "dgv_Message";
+            this.dgv_Message.RowTemplate.Height = 27;
+            this.dgv_Message.Size = new System.Drawing.Size(768, 404);
+            this.dgv_Message.TabIndex = 0;
+            // 
             // DesktopForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -437,6 +438,7 @@
             this.tabPage_ChangeCode.ResumeLayout(false);
             this.tabPage_ChangeCode.PerformLayout();
             this.tabPage_WeeklyCalendar.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Message)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -477,8 +479,8 @@
         private System.Windows.Forms.Button button_SavePassword;
         private System.Windows.Forms.Button button_ResetImformation;
         private System.Windows.Forms.Button button_SaveImformation;
-        private System.Windows.Forms.ListBox listBoxAnnouncement;
         private System.Windows.Forms.ListBox listBoxMessage;
         private System.Windows.Forms.MonthCalendar TeachingmonthCalendar;
+        private System.Windows.Forms.DataGridView dgv_Message;
     }
 }

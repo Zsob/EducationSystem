@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using SmartLinli.DatabaseDevelopement;
 
 namespace Education_System
 {
@@ -18,7 +19,9 @@ namespace Education_System
             this.StartPosition = FormStartPosition.CenterScreen;
             Student student = Student.newStudent;
             textBox_Accounment.Text =textBox_Account.Text= student.StudentNo;
-            
+            SqlHelper sqlHelper = new SqlHelper();
+            sqlHelper.QuickFill("SELECT * FROM tb_Message;", this.dgv_Message);
+
         }
 
         private void button_SavePassword_Click(object sender, EventArgs e)
