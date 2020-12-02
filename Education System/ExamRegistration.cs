@@ -21,42 +21,42 @@ namespace Education_System
 
         private void buttonSearch_Click(object sender, EventArgs e)
         {
-            Data data = new Data();
+            DataForm data = new DataForm();
             data.Show();
 
         }
 
         private void button_Search_Click(object sender, EventArgs e)
         {
-            Data data = new Data();
+            DataForm data = new DataForm();
             data.Show();
 
         }
 
         private void button__Search_Click(object sender, EventArgs e)
         {
-            Data data = new Data();
+            DataForm data = new DataForm();
             data.Show();
 
         }
 
         private void button___Search_Click(object sender, EventArgs e)
         {
-            Data data = new Data();
+            DataForm data = new DataForm();
             data.Show();
 
         }
 
         private void button____Search_Click(object sender, EventArgs e)
         {
-            Data data = new Data();
+            DataForm data = new DataForm();
             data.Show();
 
         }
 
         private void button_____Search_Click(object sender, EventArgs e)
         {
-            Data data = new Data();
+            DataForm data = new DataForm();
             data.Show();
 
         }

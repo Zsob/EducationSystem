@@ -1,6 +1,6 @@
 ﻿namespace Education_System
 {
-    partial class Data
+    partial class DataForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,34 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridViewData = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewData)).BeginInit();
+            this.dgv_Data = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Data)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridViewData
+            // dgv_Data
             // 
-            this.dataGridViewData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewData.Location = new System.Drawing.Point(0, 1);
-            this.dataGridViewData.Name = "dataGridViewData";
-            this.dataGridViewData.RowTemplate.Height = 27;
-            this.dataGridViewData.Size = new System.Drawing.Size(800, 448);
-            this.dataGridViewData.TabIndex = 0;
+            this.dgv_Data.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_Data.Location = new System.Drawing.Point(2, -1);
+            this.dgv_Data.Name = "dgv_Data";
+            this.dgv_Data.RowTemplate.Height = 27;
+            this.dgv_Data.Size = new System.Drawing.Size(797, 451);
+            this.dgv_Data.TabIndex = 0;
             // 
-            // Data
+            // DataForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.dataGridViewData);
-            this.Name = "Data";
-            this.Text = " ";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewData)).EndInit();
+            this.Controls.Add(this.dgv_Data);
+            this.Name = "DataForm";
+            this.Text = "查询";
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Data)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridViewData;
+        private System.Windows.Forms.DataGridView dgv_Data;
     }
 }

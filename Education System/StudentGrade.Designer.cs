@@ -32,6 +32,19 @@
             this.tabPageStatusManagement = new System.Windows.Forms.TabPage();
             this.tabControlStudentStatusManagement = new System.Windows.Forms.TabControl();
             this.tabPageStudentStatusCard = new System.Windows.Forms.TabPage();
+            this.comboBox_Class = new System.Windows.Forms.ComboBox();
+            this.lbl_Class = new System.Windows.Forms.Label();
+            this.txt_Phone = new System.Windows.Forms.TextBox();
+            this.lbl_Phone = new System.Windows.Forms.Label();
+            this.dtp_Birthday = new System.Windows.Forms.DateTimePicker();
+            this.lbl_Birthday = new System.Windows.Forms.Label();
+            this.rdb_Female = new System.Windows.Forms.RadioButton();
+            this.rdb_Male = new System.Windows.Forms.RadioButton();
+            this.lbl_Gender = new System.Windows.Forms.Label();
+            this.txt_StudentNo = new System.Windows.Forms.TextBox();
+            this.lbl_StudentNo = new System.Windows.Forms.Label();
+            this.txt_Name = new System.Windows.Forms.TextBox();
+            this.lbl_Name = new System.Windows.Forms.Label();
             this.tabPageProfessionalDiversion = new System.Windows.Forms.TabPage();
             this.dataGridViewProfessionalDiversion = new System.Windows.Forms.DataGridView();
             this.ColumnNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -86,24 +99,20 @@
             this.tabControlMyGrade = new System.Windows.Forms.TabControl();
             this.tabPageCourseScoreQuery = new System.Windows.Forms.TabPage();
             this.buttonInquire = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.textBox_CourseName = new System.Windows.Forms.TextBox();
+            this.comboBox_DisplayMethod = new System.Windows.Forms.ComboBox();
+            this.comboBox_CourseNature = new System.Windows.Forms.ComboBox();
+            this.comboBox_StartTime = new System.Windows.Forms.ComboBox();
             this.labelDisplayMethod = new System.Windows.Forms.Label();
             this.label_CourseName = new System.Windows.Forms.Label();
             this.labelCourseNature = new System.Windows.Forms.Label();
             this.labelStartTime = new System.Windows.Forms.Label();
             this.tabPageGradeExaminationQuery = new System.Windows.Forms.TabPage();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
-            this.ColumnNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnExamCourse = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnScoredResults = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnGradeClassResults = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnTestTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControlStudentStatus.SuspendLayout();
             this.tabPageStatusManagement.SuspendLayout();
             this.tabControlStudentStatusManagement.SuspendLayout();
+            this.tabPageStudentStatusCard.SuspendLayout();
             this.tabPageProfessionalDiversion.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProfessionalDiversion)).BeginInit();
             this.tabPageApplyForExchangeStudent.SuspendLayout();
@@ -154,6 +163,19 @@
             // 
             // tabPageStudentStatusCard
             // 
+            this.tabPageStudentStatusCard.Controls.Add(this.comboBox_Class);
+            this.tabPageStudentStatusCard.Controls.Add(this.lbl_Class);
+            this.tabPageStudentStatusCard.Controls.Add(this.txt_Phone);
+            this.tabPageStudentStatusCard.Controls.Add(this.lbl_Phone);
+            this.tabPageStudentStatusCard.Controls.Add(this.dtp_Birthday);
+            this.tabPageStudentStatusCard.Controls.Add(this.lbl_Birthday);
+            this.tabPageStudentStatusCard.Controls.Add(this.rdb_Female);
+            this.tabPageStudentStatusCard.Controls.Add(this.rdb_Male);
+            this.tabPageStudentStatusCard.Controls.Add(this.lbl_Gender);
+            this.tabPageStudentStatusCard.Controls.Add(this.txt_StudentNo);
+            this.tabPageStudentStatusCard.Controls.Add(this.lbl_StudentNo);
+            this.tabPageStudentStatusCard.Controls.Add(this.txt_Name);
+            this.tabPageStudentStatusCard.Controls.Add(this.lbl_Name);
             this.tabPageStudentStatusCard.Location = new System.Drawing.Point(4, 25);
             this.tabPageStudentStatusCard.Name = "tabPageStudentStatusCard";
             this.tabPageStudentStatusCard.Padding = new System.Windows.Forms.Padding(3);
@@ -161,6 +183,132 @@
             this.tabPageStudentStatusCard.TabIndex = 0;
             this.tabPageStudentStatusCard.Text = "学籍卡片";
             this.tabPageStudentStatusCard.UseVisualStyleBackColor = true;
+            // 
+            // comboBox_Class
+            // 
+            this.comboBox_Class.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.comboBox_Class.FormattingEnabled = true;
+            this.comboBox_Class.Location = new System.Drawing.Point(533, 236);
+            this.comboBox_Class.Name = "comboBox_Class";
+            this.comboBox_Class.Size = new System.Drawing.Size(216, 28);
+            this.comboBox_Class.TabIndex = 12;
+            // 
+            // lbl_Class
+            // 
+            this.lbl_Class.AutoSize = true;
+            this.lbl_Class.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.lbl_Class.Location = new System.Drawing.Point(457, 240);
+            this.lbl_Class.Name = "lbl_Class";
+            this.lbl_Class.Size = new System.Drawing.Size(69, 20);
+            this.lbl_Class.TabIndex = 11;
+            this.lbl_Class.Text = "班级：";
+            // 
+            // txt_Phone
+            // 
+            this.txt_Phone.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.txt_Phone.Location = new System.Drawing.Point(131, 237);
+            this.txt_Phone.Name = "txt_Phone";
+            this.txt_Phone.Size = new System.Drawing.Size(199, 30);
+            this.txt_Phone.TabIndex = 10;
+            // 
+            // lbl_Phone
+            // 
+            this.lbl_Phone.AutoSize = true;
+            this.lbl_Phone.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.lbl_Phone.Location = new System.Drawing.Point(36, 240);
+            this.lbl_Phone.Name = "lbl_Phone";
+            this.lbl_Phone.Size = new System.Drawing.Size(89, 20);
+            this.lbl_Phone.TabIndex = 9;
+            this.lbl_Phone.Text = "手机号：";
+            // 
+            // dtp_Birthday
+            // 
+            this.dtp_Birthday.CalendarFont = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.dtp_Birthday.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.dtp_Birthday.Location = new System.Drawing.Point(532, 151);
+            this.dtp_Birthday.Name = "dtp_Birthday";
+            this.dtp_Birthday.Size = new System.Drawing.Size(217, 30);
+            this.dtp_Birthday.TabIndex = 8;
+            // 
+            // lbl_Birthday
+            // 
+            this.lbl_Birthday.AutoSize = true;
+            this.lbl_Birthday.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.lbl_Birthday.Location = new System.Drawing.Point(457, 156);
+            this.lbl_Birthday.Name = "lbl_Birthday";
+            this.lbl_Birthday.Size = new System.Drawing.Size(69, 20);
+            this.lbl_Birthday.TabIndex = 7;
+            this.lbl_Birthday.Text = "生日：";
+            // 
+            // rdb_Female
+            // 
+            this.rdb_Female.AutoSize = true;
+            this.rdb_Female.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.rdb_Female.Location = new System.Drawing.Point(229, 156);
+            this.rdb_Female.Name = "rdb_Female";
+            this.rdb_Female.Size = new System.Drawing.Size(50, 24);
+            this.rdb_Female.TabIndex = 6;
+            this.rdb_Female.TabStop = true;
+            this.rdb_Female.Text = "女";
+            this.rdb_Female.UseVisualStyleBackColor = true;
+            // 
+            // rdb_Male
+            // 
+            this.rdb_Male.AutoSize = true;
+            this.rdb_Male.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.rdb_Male.Location = new System.Drawing.Point(131, 156);
+            this.rdb_Male.Name = "rdb_Male";
+            this.rdb_Male.Size = new System.Drawing.Size(50, 24);
+            this.rdb_Male.TabIndex = 5;
+            this.rdb_Male.TabStop = true;
+            this.rdb_Male.Text = "男";
+            this.rdb_Male.UseVisualStyleBackColor = true;
+            // 
+            // lbl_Gender
+            // 
+            this.lbl_Gender.AutoSize = true;
+            this.lbl_Gender.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.lbl_Gender.Location = new System.Drawing.Point(56, 158);
+            this.lbl_Gender.Name = "lbl_Gender";
+            this.lbl_Gender.Size = new System.Drawing.Size(69, 20);
+            this.lbl_Gender.TabIndex = 4;
+            this.lbl_Gender.Text = "性别：";
+            // 
+            // txt_StudentNo
+            // 
+            this.txt_StudentNo.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.txt_StudentNo.Location = new System.Drawing.Point(532, 66);
+            this.txt_StudentNo.Name = "txt_StudentNo";
+            this.txt_StudentNo.Size = new System.Drawing.Size(217, 30);
+            this.txt_StudentNo.TabIndex = 3;
+            // 
+            // lbl_StudentNo
+            // 
+            this.lbl_StudentNo.AutoSize = true;
+            this.lbl_StudentNo.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.lbl_StudentNo.Location = new System.Drawing.Point(457, 69);
+            this.lbl_StudentNo.Name = "lbl_StudentNo";
+            this.lbl_StudentNo.Size = new System.Drawing.Size(69, 20);
+            this.lbl_StudentNo.TabIndex = 2;
+            this.lbl_StudentNo.Text = "学号：";
+            // 
+            // txt_Name
+            // 
+            this.txt_Name.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.txt_Name.Location = new System.Drawing.Point(131, 66);
+            this.txt_Name.Name = "txt_Name";
+            this.txt_Name.Size = new System.Drawing.Size(199, 30);
+            this.txt_Name.TabIndex = 1;
+            // 
+            // lbl_Name
+            // 
+            this.lbl_Name.AutoSize = true;
+            this.lbl_Name.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.lbl_Name.Location = new System.Drawing.Point(56, 69);
+            this.lbl_Name.Name = "lbl_Name";
+            this.lbl_Name.Size = new System.Drawing.Size(69, 20);
+            this.lbl_Name.TabIndex = 0;
+            this.lbl_Name.Text = "姓名：";
             // 
             // tabPageProfessionalDiversion
             // 
@@ -185,10 +333,10 @@
             this.ColumnApprovalStatus,
             this.ColumnModifyTime,
             this.dataGridViewTextBoxColumn1});
-            this.dataGridViewProfessionalDiversion.Location = new System.Drawing.Point(0, 4);
+            this.dataGridViewProfessionalDiversion.Location = new System.Drawing.Point(0, 0);
             this.dataGridViewProfessionalDiversion.Name = "dataGridViewProfessionalDiversion";
             this.dataGridViewProfessionalDiversion.RowTemplate.Height = 27;
-            this.dataGridViewProfessionalDiversion.Size = new System.Drawing.Size(784, 388);
+            this.dataGridViewProfessionalDiversion.Size = new System.Drawing.Size(784, 392);
             this.dataGridViewProfessionalDiversion.TabIndex = 0;
             // 
             // ColumnNumber
@@ -407,7 +555,7 @@
             // 
             // buttonStudentStatusManagement
             // 
-            this.buttonStudentStatusManagement.Location = new System.Drawing.Point(269, 316);
+            this.buttonStudentStatusManagement.Location = new System.Drawing.Point(301, 320);
             this.buttonStudentStatusManagement.Name = "buttonStudentStatusManagement";
             this.buttonStudentStatusManagement.Size = new System.Drawing.Size(110, 35);
             this.buttonStudentStatusManagement.TabIndex = 16;
@@ -585,10 +733,10 @@
             // tabPageCourseScoreQuery
             // 
             this.tabPageCourseScoreQuery.Controls.Add(this.buttonInquire);
-            this.tabPageCourseScoreQuery.Controls.Add(this.textBox1);
-            this.tabPageCourseScoreQuery.Controls.Add(this.comboBox4);
-            this.tabPageCourseScoreQuery.Controls.Add(this.comboBox2);
-            this.tabPageCourseScoreQuery.Controls.Add(this.comboBox1);
+            this.tabPageCourseScoreQuery.Controls.Add(this.textBox_CourseName);
+            this.tabPageCourseScoreQuery.Controls.Add(this.comboBox_DisplayMethod);
+            this.tabPageCourseScoreQuery.Controls.Add(this.comboBox_CourseNature);
+            this.tabPageCourseScoreQuery.Controls.Add(this.comboBox_StartTime);
             this.tabPageCourseScoreQuery.Controls.Add(this.labelDisplayMethod);
             this.tabPageCourseScoreQuery.Controls.Add(this.label_CourseName);
             this.tabPageCourseScoreQuery.Controls.Add(this.labelCourseNature);
@@ -596,7 +744,7 @@
             this.tabPageCourseScoreQuery.Location = new System.Drawing.Point(4, 25);
             this.tabPageCourseScoreQuery.Name = "tabPageCourseScoreQuery";
             this.tabPageCourseScoreQuery.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageCourseScoreQuery.Size = new System.Drawing.Size(777, 374);
+            this.tabPageCourseScoreQuery.Size = new System.Drawing.Size(777, 377);
             this.tabPageCourseScoreQuery.TabIndex = 0;
             this.tabPageCourseScoreQuery.Text = "课程成绩查询";
             this.tabPageCourseScoreQuery.UseVisualStyleBackColor = true;
@@ -611,31 +759,31 @@
             this.buttonInquire.UseVisualStyleBackColor = true;
             this.buttonInquire.Click += new System.EventHandler(this.buttonInquire_Click);
             // 
-            // textBox1
+            // textBox_CourseName
             // 
-            this.textBox1.Font = new System.Drawing.Font("宋体", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.textBox1.Location = new System.Drawing.Point(377, 105);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(193, 34);
-            this.textBox1.TabIndex = 8;
+            this.textBox_CourseName.Font = new System.Drawing.Font("宋体", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.textBox_CourseName.Location = new System.Drawing.Point(377, 105);
+            this.textBox_CourseName.Name = "textBox_CourseName";
+            this.textBox_CourseName.Size = new System.Drawing.Size(193, 34);
+            this.textBox_CourseName.TabIndex = 8;
             // 
-            // comboBox4
+            // comboBox_DisplayMethod
             // 
-            this.comboBox4.Font = new System.Drawing.Font("宋体", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Items.AddRange(new object[] {
+            this.comboBox_DisplayMethod.Font = new System.Drawing.Font("宋体", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.comboBox_DisplayMethod.FormattingEnabled = true;
+            this.comboBox_DisplayMethod.Items.AddRange(new object[] {
             "显示全部成绩",
             "显示最好成绩"});
-            this.comboBox4.Location = new System.Drawing.Point(377, 147);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(193, 31);
-            this.comboBox4.TabIndex = 7;
+            this.comboBox_DisplayMethod.Location = new System.Drawing.Point(377, 147);
+            this.comboBox_DisplayMethod.Name = "comboBox_DisplayMethod";
+            this.comboBox_DisplayMethod.Size = new System.Drawing.Size(193, 31);
+            this.comboBox_DisplayMethod.TabIndex = 7;
             // 
-            // comboBox2
+            // comboBox_CourseNature
             // 
-            this.comboBox2.Font = new System.Drawing.Font("宋体", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
+            this.comboBox_CourseNature.Font = new System.Drawing.Font("宋体", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.comboBox_CourseNature.FormattingEnabled = true;
+            this.comboBox_CourseNature.Items.AddRange(new object[] {
             "公共基础课",
             "专业基础课",
             "专业课",
@@ -648,32 +796,21 @@
             "通识教育课",
             "学科基础课",
             "专业教育课"});
-            this.comboBox2.Location = new System.Drawing.Point(377, 69);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(193, 31);
-            this.comboBox2.TabIndex = 5;
-            this.comboBox2.Text = "——请选择——";
+            this.comboBox_CourseNature.Location = new System.Drawing.Point(377, 69);
+            this.comboBox_CourseNature.Name = "comboBox_CourseNature";
+            this.comboBox_CourseNature.Size = new System.Drawing.Size(193, 31);
+            this.comboBox_CourseNature.TabIndex = 5;
+            this.comboBox_CourseNature.Text = "——请选择——";
             // 
-            // comboBox1
+            // comboBox_StartTime
             // 
-            this.comboBox1.Font = new System.Drawing.Font("宋体", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "2022-2023-2",
-            "2022-2023-1",
-            "2021-2022-2",
-            "2021-2022-1",
-            "2020-2021-2",
-            "2020-2021-1",
-            "2019-2020-2",
-            "2019-2020-1",
-            "2018-2019-2",
-            "2018-2019-1"});
-            this.comboBox1.Location = new System.Drawing.Point(377, 30);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(193, 31);
-            this.comboBox1.TabIndex = 4;
-            this.comboBox1.Text = "——请选择——";
+            this.comboBox_StartTime.Font = new System.Drawing.Font("宋体", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.comboBox_StartTime.FormattingEnabled = true;
+            this.comboBox_StartTime.Location = new System.Drawing.Point(377, 30);
+            this.comboBox_StartTime.Name = "comboBox_StartTime";
+            this.comboBox_StartTime.Size = new System.Drawing.Size(193, 31);
+            this.comboBox_StartTime.TabIndex = 4;
+            this.comboBox_StartTime.Text = "——请选择——";
             // 
             // labelDisplayMethod
             // 
@@ -725,42 +862,11 @@
             // dataGridView3
             // 
             this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ColumnNo,
-            this.ColumnExamCourse,
-            this.ColumnScoredResults,
-            this.ColumnGradeClassResults,
-            this.ColumnTestTime});
             this.dataGridView3.Location = new System.Drawing.Point(4, 4);
             this.dataGridView3.Name = "dataGridView3";
             this.dataGridView3.RowTemplate.Height = 27;
             this.dataGridView3.Size = new System.Drawing.Size(773, 367);
             this.dataGridView3.TabIndex = 0;
-            // 
-            // ColumnNo
-            // 
-            this.ColumnNo.HeaderText = "序号";
-            this.ColumnNo.Name = "ColumnNo";
-            // 
-            // ColumnExamCourse
-            // 
-            this.ColumnExamCourse.HeaderText = "考级课程";
-            this.ColumnExamCourse.Name = "ColumnExamCourse";
-            // 
-            // ColumnScoredResults
-            // 
-            this.ColumnScoredResults.HeaderText = "分数类成绩";
-            this.ColumnScoredResults.Name = "ColumnScoredResults";
-            // 
-            // ColumnGradeClassResults
-            // 
-            this.ColumnGradeClassResults.HeaderText = "等级类成绩";
-            this.ColumnGradeClassResults.Name = "ColumnGradeClassResults";
-            // 
-            // ColumnTestTime
-            // 
-            this.ColumnTestTime.HeaderText = "考级时间";
-            this.ColumnTestTime.Name = "ColumnTestTime";
             // 
             // StudentGrade
             // 
@@ -773,6 +879,8 @@
             this.tabControlStudentStatus.ResumeLayout(false);
             this.tabPageStatusManagement.ResumeLayout(false);
             this.tabControlStudentStatusManagement.ResumeLayout(false);
+            this.tabPageStudentStatusCard.ResumeLayout(false);
+            this.tabPageStudentStatusCard.PerformLayout();
             this.tabPageProfessionalDiversion.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProfessionalDiversion)).EndInit();
             this.tabPageApplyForExchangeStudent.ResumeLayout(false);
@@ -851,20 +959,28 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnCredit;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnFinalReviewStatus;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnOperating;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.ComboBox comboBox4;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.TextBox textBox_CourseName;
+        private System.Windows.Forms.ComboBox comboBox_DisplayMethod;
+        private System.Windows.Forms.ComboBox comboBox_CourseNature;
+        private System.Windows.Forms.ComboBox comboBox_StartTime;
         private System.Windows.Forms.Label labelDisplayMethod;
         private System.Windows.Forms.Label label_CourseName;
         private System.Windows.Forms.Label labelCourseNature;
         private System.Windows.Forms.Label labelStartTime;
         private System.Windows.Forms.Button buttonInquire;
         private System.Windows.Forms.DataGridView dataGridView3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnNo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnExamCourse;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnScoredResults;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnGradeClassResults;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnTestTime;
+        private System.Windows.Forms.TextBox txt_StudentNo;
+        private System.Windows.Forms.Label lbl_StudentNo;
+        private System.Windows.Forms.TextBox txt_Name;
+        private System.Windows.Forms.Label lbl_Name;
+        private System.Windows.Forms.RadioButton rdb_Female;
+        private System.Windows.Forms.RadioButton rdb_Male;
+        private System.Windows.Forms.Label lbl_Gender;
+        private System.Windows.Forms.DateTimePicker dtp_Birthday;
+        private System.Windows.Forms.Label lbl_Birthday;
+        private System.Windows.Forms.ComboBox comboBox_Class;
+        private System.Windows.Forms.Label lbl_Class;
+        private System.Windows.Forms.TextBox txt_Phone;
+        private System.Windows.Forms.Label lbl_Phone;
     }
 }

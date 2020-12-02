@@ -22,7 +22,7 @@ namespace Education_System
         private void btn_SignUp_Click(object sender, EventArgs e)
         {
             string commandText =
-                $@"INSERT dbo.tb_Student(No,Password)
+                $@"INSERT dbo.tb_StudentLogIn(No,Password)
                     VALUES({txt_StudentNo.Text},{txt_PassWord.Text})";
             SqlHelper sqlHelper = new SqlHelper();
             int rowAffected = sqlHelper.QuickSubmit(commandText);

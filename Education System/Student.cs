@@ -19,7 +19,7 @@ namespace Education_System
         {
             this.StudentNo = StudentNo;
         }
-        public static Student newStudent = new Student("未登录");
-
+        //public static Student newStudent = new Student("未登录");
+        public static Student newStudent = new Student("3190707011");
     }
 }

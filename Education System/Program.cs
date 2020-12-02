@@ -16,7 +16,8 @@ namespace Education_System
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form_System());
+            Form_System form_System = new Form_System();
+            Application.Run(form_System);
         }
     }
 }

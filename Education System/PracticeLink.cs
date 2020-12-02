@@ -21,14 +21,14 @@ namespace Education_System
 
         private void buttonReservation_Click(object sender, EventArgs e)
         {
-            Data data = new Data();
+            DataForm data = new DataForm();
             data.Show();
 
         }
 
         private void button_Reservation_Click(object sender, EventArgs e)
         {
-            Data data = new Data();
+            DataForm data = new DataForm();
             data.Show();
 
         }

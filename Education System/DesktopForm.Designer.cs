@@ -30,8 +30,9 @@
         {
             this.tabControlDesktop = new System.Windows.Forms.TabControl();
             this.tabPage_Announce = new System.Windows.Forms.TabPage();
+            this.dgv_Announcement = new System.Windows.Forms.DataGridView();
             this.tabPage_Message = new System.Windows.Forms.TabPage();
-            this.listBoxMessage = new System.Windows.Forms.ListBox();
+            this.dgv_Message = new System.Windows.Forms.DataGridView();
             this.tabPage_SecurityQuestion = new System.Windows.Forms.TabPage();
             this.button_ResetImformation = new System.Windows.Forms.Button();
             this.button_SaveImformation = new System.Windows.Forms.Button();
@@ -50,7 +51,7 @@
             this.textBox_Account = new System.Windows.Forms.TextBox();
             this.tabPage_ChangeCode = new System.Windows.Forms.TabPage();
             this.button_ResetPassword = new System.Windows.Forms.Button();
-            this.button_SavePassword = new System.Windows.Forms.Button();
+            this.button_ChangePassword = new System.Windows.Forms.Button();
             this.label_ThirdWarning = new System.Windows.Forms.Label();
             this.label_SecondWarning = new System.Windows.Forms.Label();
             this.label_FirstWarning = new System.Windows.Forms.Label();
@@ -64,14 +65,14 @@
             this.textBox_Accounment = new System.Windows.Forms.TextBox();
             this.tabPage_WeeklyCalendar = new System.Windows.Forms.TabPage();
             this.TeachingmonthCalendar = new System.Windows.Forms.MonthCalendar();
-            this.dgv_Message = new System.Windows.Forms.DataGridView();
             this.tabControlDesktop.SuspendLayout();
             this.tabPage_Announce.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Announcement)).BeginInit();
             this.tabPage_Message.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Message)).BeginInit();
             this.tabPage_SecurityQuestion.SuspendLayout();
             this.tabPage_ChangeCode.SuspendLayout();
             this.tabPage_WeeklyCalendar.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_Message)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControlDesktop
@@ -90,7 +91,7 @@
             // 
             // tabPage_Announce
             // 
-            this.tabPage_Announce.Controls.Add(this.dgv_Message);
+            this.tabPage_Announce.Controls.Add(this.dgv_Announcement);
             this.tabPage_Announce.Location = new System.Drawing.Point(4, 25);
             this.tabPage_Announce.Name = "tabPage_Announce";
             this.tabPage_Announce.Padding = new System.Windows.Forms.Padding(3);
@@ -99,9 +100,20 @@
             this.tabPage_Announce.Text = "已收公告";
             this.tabPage_Announce.UseVisualStyleBackColor = true;
             // 
+            // dgv_Announcement
+            // 
+            this.dgv_Announcement.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgv_Announcement.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_Announcement.Location = new System.Drawing.Point(0, 0);
+            this.dgv_Announcement.Name = "dgv_Announcement";
+            this.dgv_Announcement.RowTemplate.Height = 27;
+            this.dgv_Announcement.Size = new System.Drawing.Size(768, 404);
+            this.dgv_Announcement.TabIndex = 0;
+            this.dgv_Announcement.DoubleClick += new System.EventHandler(this.dgv_Announcement_DoubleClick);
+            // 
             // tabPage_Message
             // 
-            this.tabPage_Message.Controls.Add(this.listBoxMessage);
+            this.tabPage_Message.Controls.Add(this.dgv_Message);
             this.tabPage_Message.Location = new System.Drawing.Point(4, 25);
             this.tabPage_Message.Name = "tabPage_Message";
             this.tabPage_Message.Padding = new System.Windows.Forms.Padding(3);
@@ -110,14 +122,15 @@
             this.tabPage_Message.Text = "已收留言";
             this.tabPage_Message.UseVisualStyleBackColor = true;
             // 
-            // listBoxMessage
+            // dgv_Message
             // 
-            this.listBoxMessage.FormattingEnabled = true;
-            this.listBoxMessage.ItemHeight = 15;
-            this.listBoxMessage.Location = new System.Drawing.Point(6, 6);
-            this.listBoxMessage.Name = "listBoxMessage";
-            this.listBoxMessage.Size = new System.Drawing.Size(756, 394);
-            this.listBoxMessage.TabIndex = 1;
+            this.dgv_Message.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgv_Message.Location = new System.Drawing.Point(0, 0);
+            this.dgv_Message.Name = "dgv_Message";
+            this.dgv_Message.RowTemplate.Height = 27;
+            this.dgv_Message.Size = new System.Drawing.Size(768, 407);
+            this.dgv_Message.TabIndex = 0;
+            this.dgv_Message.DoubleClick += new System.EventHandler(this.dgv_Message_DoubleClick);
             // 
             // tabPage_SecurityQuestion
             // 
@@ -266,7 +279,7 @@
             // tabPage_ChangeCode
             // 
             this.tabPage_ChangeCode.Controls.Add(this.button_ResetPassword);
-            this.tabPage_ChangeCode.Controls.Add(this.button_SavePassword);
+            this.tabPage_ChangeCode.Controls.Add(this.button_ChangePassword);
             this.tabPage_ChangeCode.Controls.Add(this.label_ThirdWarning);
             this.tabPage_ChangeCode.Controls.Add(this.label_SecondWarning);
             this.tabPage_ChangeCode.Controls.Add(this.label_FirstWarning);
@@ -287,7 +300,7 @@
             // 
             // button_ResetPassword
             // 
-            this.button_ResetPassword.Location = new System.Drawing.Point(394, 309);
+            this.button_ResetPassword.Location = new System.Drawing.Point(420, 319);
             this.button_ResetPassword.Name = "button_ResetPassword";
             this.button_ResetPassword.Size = new System.Drawing.Size(77, 32);
             this.button_ResetPassword.TabIndex = 12;
@@ -295,20 +308,20 @@
             this.button_ResetPassword.UseVisualStyleBackColor = true;
             this.button_ResetPassword.Click += new System.EventHandler(this.button_ResetPassword_Click);
             // 
-            // button_SavePassword
+            // button_ChangePassword
             // 
-            this.button_SavePassword.Location = new System.Drawing.Point(225, 309);
-            this.button_SavePassword.Name = "button_SavePassword";
-            this.button_SavePassword.Size = new System.Drawing.Size(77, 32);
-            this.button_SavePassword.TabIndex = 11;
-            this.button_SavePassword.Text = "保存";
-            this.button_SavePassword.UseVisualStyleBackColor = true;
-            this.button_SavePassword.Click += new System.EventHandler(this.button_SavePassword_Click);
+            this.button_ChangePassword.Location = new System.Drawing.Point(251, 319);
+            this.button_ChangePassword.Name = "button_ChangePassword";
+            this.button_ChangePassword.Size = new System.Drawing.Size(77, 32);
+            this.button_ChangePassword.TabIndex = 11;
+            this.button_ChangePassword.Text = "修改";
+            this.button_ChangePassword.UseVisualStyleBackColor = true;
+            this.button_ChangePassword.Click += new System.EventHandler(this.button_SavePassword_Click);
             // 
             // label_ThirdWarning
             // 
             this.label_ThirdWarning.ForeColor = System.Drawing.Color.Red;
-            this.label_ThirdWarning.Location = new System.Drawing.Point(554, 241);
+            this.label_ThirdWarning.Location = new System.Drawing.Point(580, 251);
             this.label_ThirdWarning.Name = "label_ThirdWarning";
             this.label_ThirdWarning.Size = new System.Drawing.Size(110, 25);
             this.label_ThirdWarning.TabIndex = 10;
@@ -317,7 +330,7 @@
             // label_SecondWarning
             // 
             this.label_SecondWarning.ForeColor = System.Drawing.Color.Red;
-            this.label_SecondWarning.Location = new System.Drawing.Point(554, 180);
+            this.label_SecondWarning.Location = new System.Drawing.Point(580, 190);
             this.label_SecondWarning.Name = "label_SecondWarning";
             this.label_SecondWarning.Size = new System.Drawing.Size(110, 25);
             this.label_SecondWarning.TabIndex = 9;
@@ -326,7 +339,7 @@
             // label_FirstWarning
             // 
             this.label_FirstWarning.ForeColor = System.Drawing.Color.Red;
-            this.label_FirstWarning.Location = new System.Drawing.Point(554, 122);
+            this.label_FirstWarning.Location = new System.Drawing.Point(580, 132);
             this.label_FirstWarning.Name = "label_FirstWarning";
             this.label_FirstWarning.Size = new System.Drawing.Size(110, 25);
             this.label_FirstWarning.TabIndex = 8;
@@ -334,7 +347,7 @@
             // 
             // label_CheekPassword
             // 
-            this.label_CheekPassword.Location = new System.Drawing.Point(86, 238);
+            this.label_CheekPassword.Location = new System.Drawing.Point(112, 248);
             this.label_CheekPassword.Name = "label_CheekPassword";
             this.label_CheekPassword.Size = new System.Drawing.Size(110, 25);
             this.label_CheekPassword.TabIndex = 7;
@@ -342,7 +355,7 @@
             // 
             // label_NewPassword
             // 
-            this.label_NewPassword.Location = new System.Drawing.Point(86, 180);
+            this.label_NewPassword.Location = new System.Drawing.Point(112, 190);
             this.label_NewPassword.Name = "label_NewPassword";
             this.label_NewPassword.Size = new System.Drawing.Size(110, 25);
             this.label_NewPassword.TabIndex = 6;
@@ -350,7 +363,7 @@
             // 
             // label_OldPassword
             // 
-            this.label_OldPassword.Location = new System.Drawing.Point(86, 122);
+            this.label_OldPassword.Location = new System.Drawing.Point(112, 132);
             this.label_OldPassword.Name = "label_OldPassword";
             this.label_OldPassword.Size = new System.Drawing.Size(110, 25);
             this.label_OldPassword.TabIndex = 5;
@@ -358,7 +371,7 @@
             // 
             // label_Accountment
             // 
-            this.label_Accountment.Location = new System.Drawing.Point(86, 64);
+            this.label_Accountment.Location = new System.Drawing.Point(112, 74);
             this.label_Accountment.Name = "label_Accountment";
             this.label_Accountment.Size = new System.Drawing.Size(110, 25);
             this.label_Accountment.TabIndex = 4;
@@ -366,7 +379,7 @@
             // 
             // textBox_CheekPassword
             // 
-            this.textBox_CheekPassword.Location = new System.Drawing.Point(239, 238);
+            this.textBox_CheekPassword.Location = new System.Drawing.Point(265, 248);
             this.textBox_CheekPassword.Name = "textBox_CheekPassword";
             this.textBox_CheekPassword.PasswordChar = '*';
             this.textBox_CheekPassword.Size = new System.Drawing.Size(291, 25);
@@ -374,7 +387,7 @@
             // 
             // textBox_NewPassword
             // 
-            this.textBox_NewPassword.Location = new System.Drawing.Point(239, 180);
+            this.textBox_NewPassword.Location = new System.Drawing.Point(265, 190);
             this.textBox_NewPassword.Name = "textBox_NewPassword";
             this.textBox_NewPassword.PasswordChar = '*';
             this.textBox_NewPassword.Size = new System.Drawing.Size(291, 25);
@@ -382,7 +395,7 @@
             // 
             // textBox_OldPassword
             // 
-            this.textBox_OldPassword.Location = new System.Drawing.Point(239, 122);
+            this.textBox_OldPassword.Location = new System.Drawing.Point(265, 132);
             this.textBox_OldPassword.Name = "textBox_OldPassword";
             this.textBox_OldPassword.PasswordChar = '*';
             this.textBox_OldPassword.Size = new System.Drawing.Size(291, 25);
@@ -390,7 +403,7 @@
             // 
             // textBox_Accounment
             // 
-            this.textBox_Accounment.Location = new System.Drawing.Point(239, 64);
+            this.textBox_Accounment.Location = new System.Drawing.Point(265, 74);
             this.textBox_Accounment.Name = "textBox_Accounment";
             this.textBox_Accounment.ReadOnly = true;
             this.textBox_Accounment.Size = new System.Drawing.Size(291, 25);
@@ -408,19 +421,10 @@
             // 
             // TeachingmonthCalendar
             // 
-            this.TeachingmonthCalendar.CalendarDimensions = new System.Drawing.Size(3, 2);
-            this.TeachingmonthCalendar.Location = new System.Drawing.Point(-4, 0);
+            this.TeachingmonthCalendar.CalendarDimensions = new System.Drawing.Size(2, 2);
+            this.TeachingmonthCalendar.Location = new System.Drawing.Point(149, 8);
             this.TeachingmonthCalendar.Name = "TeachingmonthCalendar";
             this.TeachingmonthCalendar.TabIndex = 0;
-            // 
-            // dgv_Message
-            // 
-            this.dgv_Message.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_Message.Location = new System.Drawing.Point(0, 0);
-            this.dgv_Message.Name = "dgv_Message";
-            this.dgv_Message.RowTemplate.Height = 27;
-            this.dgv_Message.Size = new System.Drawing.Size(768, 404);
-            this.dgv_Message.TabIndex = 0;
             // 
             // DesktopForm
             // 
@@ -432,13 +436,14 @@
             this.Text = "我的桌面";
             this.tabControlDesktop.ResumeLayout(false);
             this.tabPage_Announce.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Announcement)).EndInit();
             this.tabPage_Message.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Message)).EndInit();
             this.tabPage_SecurityQuestion.ResumeLayout(false);
             this.tabPage_SecurityQuestion.PerformLayout();
             this.tabPage_ChangeCode.ResumeLayout(false);
             this.tabPage_ChangeCode.PerformLayout();
             this.tabPage_WeeklyCalendar.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_Message)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -476,11 +481,11 @@
         private System.Windows.Forms.TextBox textBox_FirstQuestion;
         private System.Windows.Forms.TextBox textBox_Name;
         private System.Windows.Forms.Button button_ResetPassword;
-        private System.Windows.Forms.Button button_SavePassword;
         private System.Windows.Forms.Button button_ResetImformation;
         private System.Windows.Forms.Button button_SaveImformation;
-        private System.Windows.Forms.ListBox listBoxMessage;
         private System.Windows.Forms.MonthCalendar TeachingmonthCalendar;
+        private System.Windows.Forms.DataGridView dgv_Announcement;
         private System.Windows.Forms.DataGridView dgv_Message;
+        private System.Windows.Forms.Button button_ChangePassword;
     }
 }
