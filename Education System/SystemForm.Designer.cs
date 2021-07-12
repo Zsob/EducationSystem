@@ -272,8 +272,6 @@
             this.Controls.Add(this.textBox_Acountment);
             this.Name = "Form_System";
             this.Text = "福建中医药大学综合教务管理系统";
-            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form_System_MouseDown);
-            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form_System_MouseMove);
             this.groupBox_Information.ResumeLayout(false);
             this.groupBox_Information.PerformLayout();
             this.ResumeLayout(false);

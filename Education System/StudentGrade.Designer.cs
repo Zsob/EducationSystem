@@ -751,7 +751,7 @@
             // 
             // buttonInquire
             // 
-            this.buttonInquire.Location = new System.Drawing.Point(281, 229);
+            this.buttonInquire.Location = new System.Drawing.Point(282, 234);
             this.buttonInquire.Name = "buttonInquire";
             this.buttonInquire.Size = new System.Drawing.Size(124, 37);
             this.buttonInquire.TabIndex = 9;
@@ -784,15 +784,6 @@
             this.comboBox_CourseNature.Font = new System.Drawing.Font("宋体", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.comboBox_CourseNature.FormattingEnabled = true;
             this.comboBox_CourseNature.Items.AddRange(new object[] {
-            "公共基础课",
-            "专业基础课",
-            "专业课",
-            "专业选修课",
-            "公共选修课",
-            "外校交流课程",
-            "海外交流课程",
-            "指定选修课",
-            "OSCE",
             "通识教育课",
             "学科基础课",
             "专业教育课"});
@@ -828,7 +819,7 @@
             this.label_CourseName.Name = "label_CourseName";
             this.label_CourseName.Size = new System.Drawing.Size(171, 39);
             this.label_CourseName.TabIndex = 2;
-            this.label_CourseName.Text = "课程时间：";
+            this.label_CourseName.Text = "课程名称：";
             // 
             // labelCourseNature
             // 

@@ -23,7 +23,7 @@ namespace Education_System
         {
             string commandText =
                 $@"INSERT dbo.tb_StudentLogIn(No,Password)
-                    VALUES({txt_StudentNo.Text},{txt_PassWord.Text})";
+                    VALUES({txt_StudentNo.Text},HASHBYTES('MD5','{this.txt_PassWord.Text.Trim()}'))";
             SqlHelper sqlHelper = new SqlHelper();
             int rowAffected = sqlHelper.QuickSubmit(commandText);
             if (rowAffected == 1)

@@ -30,7 +30,7 @@ namespace Education_System
             string commandText =
                 $@"SELECT 1 
 					FROM dbo.tb_StudentLogIn
-					WHERE No='{this.txt_StudentNo.Text.Trim()}' AND Password='{this.txt_PassWord.Text.Trim()}';";
+					WHERE No='{this.txt_StudentNo.Text.Trim()}' AND Password=HASHBYTES('MD5','{this.txt_PassWord.Text.Trim()}');";
             SqlHelper sqlHelper = new SqlHelper();
             int result=sqlHelper.QuickReturn<int>(commandText);
             if (result == 1)

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControlExamRegistration = new System.Windows.Forms.TabControl();
             this.tabPageMyApplication = new System.Windows.Forms.TabPage();
             this.tabControlMyApplication = new System.Windows.Forms.TabControl();
@@ -60,6 +61,10 @@
             this.label__Term = new System.Windows.Forms.Label();
             this.tabPageMyExam = new System.Windows.Forms.TabPage();
             this.tabControlMyExam = new System.Windows.Forms.TabControl();
+            this.tabPageExamEnroll = new System.Windows.Forms.TabPage();
+            this.buttonExamWithdraw = new System.Windows.Forms.Button();
+            this.buttonExamEnroll = new System.Windows.Forms.Button();
+            this.dataGridViewExamEnroll = new System.Windows.Forms.DataGridView();
             this.tabPageExamScheduleInquiry = new System.Windows.Forms.TabPage();
             this.button___Search = new System.Windows.Forms.Button();
             this.comboBox____Term = new System.Windows.Forms.ComboBox();
@@ -127,6 +132,8 @@
             this.tabPageExemptApplication.SuspendLayout();
             this.tabPageMyExam.SuspendLayout();
             this.tabControlMyExam.SuspendLayout();
+            this.tabPageExamEnroll.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewExamEnroll)).BeginInit();
             this.tabPageExamScheduleInquiry.SuspendLayout();
             this.tabPageHalftermExamInquiry.SuspendLayout();
             this.tabPageAdvanceExaminationInquiry.SuspendLayout();
@@ -313,7 +320,7 @@
             this.label_TermMark.AutoSize = true;
             this.label_TermMark.Font = new System.Drawing.Font("宋体", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label_TermMark.ForeColor = System.Drawing.Color.Red;
-            this.label_TermMark.Location = new System.Drawing.Point(582, 54);
+            this.label_TermMark.Location = new System.Drawing.Point(552, 49);
             this.label_TermMark.Name = "label_TermMark";
             this.label_TermMark.Size = new System.Drawing.Size(25, 25);
             this.label_TermMark.TabIndex = 16;
@@ -321,7 +328,7 @@
             // 
             // button_Search
             // 
-            this.button_Search.Location = new System.Drawing.Point(280, 229);
+            this.button_Search.Location = new System.Drawing.Point(250, 224);
             this.button_Search.Name = "button_Search";
             this.button_Search.Size = new System.Drawing.Size(110, 37);
             this.button_Search.TabIndex = 15;
@@ -332,7 +339,7 @@
             // textBoxCourseName
             // 
             this.textBoxCourseName.Font = new System.Drawing.Font("宋体", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.textBoxCourseName.Location = new System.Drawing.Point(333, 104);
+            this.textBoxCourseName.Location = new System.Drawing.Point(303, 99);
             this.textBoxCourseName.Name = "textBoxCourseName";
             this.textBoxCourseName.Size = new System.Drawing.Size(227, 36);
             this.textBoxCourseName.TabIndex = 14;
@@ -352,7 +359,7 @@
             "口试",
             "等级考试",
             "作业"});
-            this.comboBoxAssessmentMethod.Location = new System.Drawing.Point(333, 155);
+            this.comboBoxAssessmentMethod.Location = new System.Drawing.Point(303, 150);
             this.comboBoxAssessmentMethod.Name = "comboBoxAssessmentMethod";
             this.comboBoxAssessmentMethod.Size = new System.Drawing.Size(227, 33);
             this.comboBoxAssessmentMethod.TabIndex = 13;
@@ -371,7 +378,7 @@
             "2018-2019-1",
             "2017-2018-2",
             "2017-2018-1"});
-            this.comboBox_Term.Location = new System.Drawing.Point(333, 51);
+            this.comboBox_Term.Location = new System.Drawing.Point(303, 46);
             this.comboBox_Term.Name = "comboBox_Term";
             this.comboBox_Term.Size = new System.Drawing.Size(227, 33);
             this.comboBox_Term.TabIndex = 12;
@@ -380,7 +387,7 @@
             // 
             this.labelAssessmentMethod.AutoSize = true;
             this.labelAssessmentMethod.Font = new System.Drawing.Font("宋体", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.labelAssessmentMethod.Location = new System.Drawing.Point(168, 155);
+            this.labelAssessmentMethod.Location = new System.Drawing.Point(138, 150);
             this.labelAssessmentMethod.Name = "labelAssessmentMethod";
             this.labelAssessmentMethod.Size = new System.Drawing.Size(137, 25);
             this.labelAssessmentMethod.TabIndex = 11;
@@ -390,7 +397,7 @@
             // 
             this.labelCourseName.AutoSize = true;
             this.labelCourseName.Font = new System.Drawing.Font("宋体", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.labelCourseName.Location = new System.Drawing.Point(168, 104);
+            this.labelCourseName.Location = new System.Drawing.Point(138, 99);
             this.labelCourseName.Name = "labelCourseName";
             this.labelCourseName.Size = new System.Drawing.Size(137, 25);
             this.labelCourseName.TabIndex = 10;
@@ -400,7 +407,7 @@
             // 
             this.label_Term.AutoSize = true;
             this.label_Term.Font = new System.Drawing.Font("宋体", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label_Term.Location = new System.Drawing.Point(168, 54);
+            this.label_Term.Location = new System.Drawing.Point(138, 49);
             this.label_Term.Name = "label_Term";
             this.label_Term.Size = new System.Drawing.Size(137, 25);
             this.label_Term.TabIndex = 9;
@@ -428,7 +435,7 @@
             this.label___Term.AutoSize = true;
             this.label___Term.Font = new System.Drawing.Font("宋体", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label___Term.ForeColor = System.Drawing.Color.Red;
-            this.label___Term.Location = new System.Drawing.Point(621, 76);
+            this.label___Term.Location = new System.Drawing.Point(582, 56);
             this.label___Term.Name = "label___Term";
             this.label___Term.Size = new System.Drawing.Size(25, 25);
             this.label___Term.TabIndex = 16;
@@ -436,7 +443,7 @@
             // 
             // button__Search
             // 
-            this.button__Search.Location = new System.Drawing.Point(319, 251);
+            this.button__Search.Location = new System.Drawing.Point(280, 231);
             this.button__Search.Name = "button__Search";
             this.button__Search.Size = new System.Drawing.Size(110, 37);
             this.button__Search.TabIndex = 15;
@@ -447,7 +454,7 @@
             // textBox_CourseName
             // 
             this.textBox_CourseName.Font = new System.Drawing.Font("宋体", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.textBox_CourseName.Location = new System.Drawing.Point(372, 126);
+            this.textBox_CourseName.Location = new System.Drawing.Point(333, 106);
             this.textBox_CourseName.Name = "textBox_CourseName";
             this.textBox_CourseName.Size = new System.Drawing.Size(227, 36);
             this.textBox_CourseName.TabIndex = 14;
@@ -461,7 +468,7 @@
             "审核中",
             "通过",
             "不通过"});
-            this.combo_BoxApprovalStatus.Location = new System.Drawing.Point(372, 177);
+            this.combo_BoxApprovalStatus.Location = new System.Drawing.Point(333, 157);
             this.combo_BoxApprovalStatus.Name = "combo_BoxApprovalStatus";
             this.combo_BoxApprovalStatus.Size = new System.Drawing.Size(227, 33);
             this.combo_BoxApprovalStatus.TabIndex = 13;
@@ -480,7 +487,7 @@
             "2018-2019-1",
             "2017-2018-2",
             "2017-2018-1"});
-            this.comboBox__Term.Location = new System.Drawing.Point(372, 73);
+            this.comboBox__Term.Location = new System.Drawing.Point(333, 53);
             this.comboBox__Term.Name = "comboBox__Term";
             this.comboBox__Term.Size = new System.Drawing.Size(227, 33);
             this.comboBox__Term.TabIndex = 12;
@@ -489,7 +496,7 @@
             // 
             this.label_ApprovalStatus.AutoSize = true;
             this.label_ApprovalStatus.Font = new System.Drawing.Font("宋体", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label_ApprovalStatus.Location = new System.Drawing.Point(207, 177);
+            this.label_ApprovalStatus.Location = new System.Drawing.Point(168, 157);
             this.label_ApprovalStatus.Name = "label_ApprovalStatus";
             this.label_ApprovalStatus.Size = new System.Drawing.Size(137, 25);
             this.label_ApprovalStatus.TabIndex = 11;
@@ -499,7 +506,7 @@
             // 
             this.label_CourseName.AutoSize = true;
             this.label_CourseName.Font = new System.Drawing.Font("宋体", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label_CourseName.Location = new System.Drawing.Point(106, 129);
+            this.label_CourseName.Location = new System.Drawing.Point(67, 109);
             this.label_CourseName.Name = "label_CourseName";
             this.label_CourseName.Size = new System.Drawing.Size(238, 25);
             this.label_CourseName.TabIndex = 10;
@@ -509,7 +516,7 @@
             // 
             this.label__Term.AutoSize = true;
             this.label__Term.Font = new System.Drawing.Font("宋体", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label__Term.Location = new System.Drawing.Point(207, 76);
+            this.label__Term.Location = new System.Drawing.Point(168, 56);
             this.label__Term.Name = "label__Term";
             this.label__Term.Size = new System.Drawing.Size(137, 25);
             this.label__Term.TabIndex = 9;
@@ -528,6 +535,7 @@
             // 
             // tabControlMyExam
             // 
+            this.tabControlMyExam.Controls.Add(this.tabPageExamEnroll);
             this.tabControlMyExam.Controls.Add(this.tabPageExamScheduleInquiry);
             this.tabControlMyExam.Controls.Add(this.tabPageHalftermExamInquiry);
             this.tabControlMyExam.Controls.Add(this.tabPageAdvanceExaminationInquiry);
@@ -536,6 +544,57 @@
             this.tabControlMyExam.SelectedIndex = 0;
             this.tabControlMyExam.Size = new System.Drawing.Size(761, 390);
             this.tabControlMyExam.TabIndex = 0;
+            // 
+            // tabPageExamEnroll
+            // 
+            this.tabPageExamEnroll.Controls.Add(this.buttonExamWithdraw);
+            this.tabPageExamEnroll.Controls.Add(this.buttonExamEnroll);
+            this.tabPageExamEnroll.Controls.Add(this.dataGridViewExamEnroll);
+            this.tabPageExamEnroll.Location = new System.Drawing.Point(4, 25);
+            this.tabPageExamEnroll.Name = "tabPageExamEnroll";
+            this.tabPageExamEnroll.Size = new System.Drawing.Size(753, 361);
+            this.tabPageExamEnroll.TabIndex = 3;
+            this.tabPageExamEnroll.Text = "考试报名";
+            this.tabPageExamEnroll.UseVisualStyleBackColor = true;
+            // 
+            // buttonExamWithdraw
+            // 
+            this.buttonExamWithdraw.Location = new System.Drawing.Point(503, 315);
+            this.buttonExamWithdraw.Name = "buttonExamWithdraw";
+            this.buttonExamWithdraw.Size = new System.Drawing.Size(99, 43);
+            this.buttonExamWithdraw.TabIndex = 2;
+            this.buttonExamWithdraw.Text = "退选";
+            this.buttonExamWithdraw.UseVisualStyleBackColor = true;
+            this.buttonExamWithdraw.Click += new System.EventHandler(this.buttonExamWithdraw_Click);
+            // 
+            // buttonExamEnroll
+            // 
+            this.buttonExamEnroll.Location = new System.Drawing.Point(134, 315);
+            this.buttonExamEnroll.Name = "buttonExamEnroll";
+            this.buttonExamEnroll.Size = new System.Drawing.Size(99, 43);
+            this.buttonExamEnroll.TabIndex = 1;
+            this.buttonExamEnroll.Text = "报名";
+            this.buttonExamEnroll.UseVisualStyleBackColor = true;
+            this.buttonExamEnroll.Click += new System.EventHandler(this.buttonExamEnroll_Click);
+            // 
+            // dataGridViewExamEnroll
+            // 
+            this.dataGridViewExamEnroll.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dataGridViewExamEnroll.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("宋体", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewExamEnroll.DefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridViewExamEnroll.Location = new System.Drawing.Point(2, 0);
+            this.dataGridViewExamEnroll.Name = "dataGridViewExamEnroll";
+            this.dataGridViewExamEnroll.ReadOnly = true;
+            this.dataGridViewExamEnroll.RowTemplate.Height = 27;
+            this.dataGridViewExamEnroll.Size = new System.Drawing.Size(751, 309);
+            this.dataGridViewExamEnroll.TabIndex = 0;
             // 
             // tabPageExamScheduleInquiry
             // 
@@ -905,10 +964,10 @@
             // 
             this.tabControlGraduationProject.Controls.Add(this.tabPageStudentSelection);
             this.tabControlGraduationProject.Controls.Add(this.tabPageGraduationReport);
-            this.tabControlGraduationProject.Location = new System.Drawing.Point(4, 0);
+            this.tabControlGraduationProject.Location = new System.Drawing.Point(-5, 0);
             this.tabControlGraduationProject.Name = "tabControlGraduationProject";
             this.tabControlGraduationProject.SelectedIndex = 0;
-            this.tabControlGraduationProject.Size = new System.Drawing.Size(760, 393);
+            this.tabControlGraduationProject.Size = new System.Drawing.Size(769, 393);
             this.tabControlGraduationProject.TabIndex = 0;
             // 
             // tabPageStudentSelection
@@ -917,7 +976,7 @@
             this.tabPageStudentSelection.Location = new System.Drawing.Point(4, 25);
             this.tabPageStudentSelection.Name = "tabPageStudentSelection";
             this.tabPageStudentSelection.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageStudentSelection.Size = new System.Drawing.Size(752, 364);
+            this.tabPageStudentSelection.Size = new System.Drawing.Size(761, 364);
             this.tabPageStudentSelection.TabIndex = 0;
             this.tabPageStudentSelection.Text = "学生选课";
             this.tabPageStudentSelection.UseVisualStyleBackColor = true;
@@ -991,7 +1050,7 @@
             this.tabPageGraduationReport.Controls.Add(this.dataGridViewGraduationReport);
             this.tabPageGraduationReport.Location = new System.Drawing.Point(4, 25);
             this.tabPageGraduationReport.Name = "tabPageGraduationReport";
-            this.tabPageGraduationReport.Size = new System.Drawing.Size(752, 364);
+            this.tabPageGraduationReport.Size = new System.Drawing.Size(761, 364);
             this.tabPageGraduationReport.TabIndex = 1;
             this.tabPageGraduationReport.Text = "毕业报告";
             this.tabPageGraduationReport.UseVisualStyleBackColor = true;
@@ -1062,6 +1121,7 @@
             this.Controls.Add(this.tabControlExamRegistration);
             this.Name = "ExamRegistration";
             this.Text = "考试报名";
+            this.Load += new System.EventHandler(this.ExamRegistration_Load);
             this.tabControlExamRegistration.ResumeLayout(false);
             this.tabPageMyApplication.ResumeLayout(false);
             this.tabControlMyApplication.ResumeLayout(false);
@@ -1073,6 +1133,8 @@
             this.tabPageExemptApplication.PerformLayout();
             this.tabPageMyExam.ResumeLayout(false);
             this.tabControlMyExam.ResumeLayout(false);
+            this.tabPageExamEnroll.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewExamEnroll)).EndInit();
             this.tabPageExamScheduleInquiry.ResumeLayout(false);
             this.tabPageExamScheduleInquiry.PerformLayout();
             this.tabPageHalftermExamInquiry.ResumeLayout(false);
@@ -1192,5 +1254,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnMidtermInspection;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnEndReport;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.TabPage tabPageExamEnroll;
+        private System.Windows.Forms.Button buttonExamWithdraw;
+        private System.Windows.Forms.Button buttonExamEnroll;
+        private System.Windows.Forms.DataGridView dataGridViewExamEnroll;
     }
 }

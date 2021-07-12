@@ -105,6 +105,12 @@
     <Compile Include="LogIn.Designer.cs">
       <DependentUpon>LogIn.cs</DependentUpon>
     </Compile>
+    <Compile Include="MessageReply.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MessageReply.Designer.cs">
+      <DependentUpon>MessageReply.cs</DependentUpon>
+    </Compile>
     <Compile Include="PracticeLink.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -155,6 +161,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="LogIn.resx">
       <DependentUpon>LogIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MessageReply.resx">
+      <DependentUpon>MessageReply.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PracticeLink.resx">
       <DependentUpon>PracticeLink.cs</DependentUpon>

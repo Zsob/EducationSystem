@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControlTrainingManagement = new System.Windows.Forms.TabControl();
             this.tabPageTrainingProgram = new System.Windows.Forms.TabPage();
             this.tabControlTrainingProgram = new System.Windows.Forms.TabControl();
@@ -94,6 +95,8 @@
             this.labelCourseSelectionCategory = new System.Windows.Forms.Label();
             this.labelTerm = new System.Windows.Forms.Label();
             this.tabPageStudentSelectionCenter = new System.Windows.Forms.TabPage();
+            this.btn_DropClass = new System.Windows.Forms.Button();
+            this.btn_SelectCoures = new System.Windows.Forms.Button();
             this.dgv_SelectedCourse = new System.Windows.Forms.DataGridView();
             this.dgv_AllCourses = new System.Windows.Forms.DataGridView();
             this.tabPageStudentPreselectionManagement = new System.Windows.Forms.TabPage();
@@ -106,6 +109,11 @@
             this.dataGridViewTextBoxColumn23 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnOperating = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPageClassroomLoanApplication = new System.Windows.Forms.TabPage();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.dgv_ClassroomBorrow = new System.Windows.Forms.DataGridView();
+            this.btn_ClassroomBorrow = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.lbl_ClassroomBorrow = new System.Windows.Forms.Label();
             this.tabPageTeachingSchedule = new System.Windows.Forms.TabPage();
             this.button_Search = new System.Windows.Forms.Button();
             this.textBoxTeacher = new System.Windows.Forms.TextBox();
@@ -124,41 +132,6 @@
             this.ColumnCourseNature = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnGettingCredit = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPageTextbookManagement = new System.Windows.Forms.TabPage();
-            this.tabControlTextbookManagement = new System.Windows.Forms.TabControl();
-            this.tabPageStudentTextbookSelection = new System.Windows.Forms.TabPage();
-            this.dataGridViewTextbookSelection = new System.Windows.Forms.DataGridView();
-            this.ColumnSelectedTeachers = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnInstructor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column_CourseTitle = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column_Term = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnNumberOfBooksOrdered = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnTextbookName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnISBN = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnTextbookAuthor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnPublishingHouse = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnEdition = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column_Operation = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label1 = new System.Windows.Forms.Label();
-            this.tabPageTeachingMaterialAccountInformation = new System.Windows.Forms.TabPage();
-            this.dataGridViewAccountingInformation = new System.Windows.Forms.DataGridView();
-            this.Column__Term = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column__CourseTitle = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn24 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column_TextbookName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column_ISBN = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnAuthor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column_PublishingHouse = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column_Edition = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnAmount = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnNumberOfBooks = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnTheWay = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnRemarks = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tabPageTextbookSubscription = new System.Windows.Forms.TabPage();
-            this.button__Search = new System.Windows.Forms.Button();
-            this.label__TermMark = new System.Windows.Forms.Label();
-            this.comboBox_Term = new System.Windows.Forms.ComboBox();
-            this.label__Term = new System.Windows.Forms.Label();
             this.tabPageMinorManagement = new System.Windows.Forms.TabPage();
             this.button___Search = new System.Windows.Forms.Button();
             this.labelMinorGradeMark = new System.Windows.Forms.Label();
@@ -169,8 +142,50 @@
             this.labelMinor = new System.Windows.Forms.Label();
             this.labelMinorGrade = new System.Windows.Forms.Label();
             this.labelMinorSchool = new System.Windows.Forms.Label();
-            this.btn_SelectCoures = new System.Windows.Forms.Button();
-            this.btn_DropClass = new System.Windows.Forms.Button();
+            this.tabPageTextbookSubscription = new System.Windows.Forms.TabPage();
+            this.btn_BookPurchase = new System.Windows.Forms.Button();
+            this.tabPageTeachingMaterialAccountInformation = new System.Windows.Forms.TabPage();
+            this.dataGridViewAccountingInformation = new System.Windows.Forms.DataGridView();
+            this.ColumnRemarks = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnTheWay = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnNumberOfBooks = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnAmount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column_Edition = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column_PublishingHouse = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnAuthor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column_ISBN = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column_TextbookName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn24 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column__CourseTitle = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column__Term = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tabPageStudentTextbookSelection = new System.Windows.Forms.TabPage();
+            this.label1 = new System.Windows.Forms.Label();
+            this.dataGridViewTextbookSelection = new System.Windows.Forms.DataGridView();
+            this.Column_Operation = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnEdition = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnPublishingHouse = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnTextbookAuthor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnISBN = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnTextbookName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnNumberOfBooksOrdered = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column_Term = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column_CourseTitle = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnInstructor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnSelectedTeachers = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tabControlTextbookManagement = new System.Windows.Forms.TabControl();
+            this.gpb_Record = new System.Windows.Forms.GroupBox();
+            this.btn_CancelAll = new System.Windows.Forms.Button();
+            this.btn_cancel = new System.Windows.Forms.Button();
+            this.gv_Record = new System.Windows.Forms.DataGridView();
+            this.btn_Record = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.gpb_BookPurchase = new System.Windows.Forms.GroupBox();
+            this.btn_Find = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.btn_Purchase = new System.Windows.Forms.Button();
+            this.cmb_Term = new System.Windows.Forms.ComboBox();
+            this.gv_Book = new System.Windows.Forms.DataGridView();
             this.tabControlTrainingManagement.SuspendLayout();
             this.tabPageTrainingProgram.SuspendLayout();
             this.tabControlTrainingProgram.SuspendLayout();
@@ -194,17 +209,24 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgv_AllCourses)).BeginInit();
             this.tabPageStudentPreselectionManagement.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewStudentPreselectionManagement)).BeginInit();
+            this.tabPageClassroomLoanApplication.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_ClassroomBorrow)).BeginInit();
             this.tabPageTeachingSchedule.SuspendLayout();
             this.tabPageStudentStudyStatus.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewStudyStatus)).BeginInit();
             this.tabPageTextbookManagement.SuspendLayout();
-            this.tabControlTextbookManagement.SuspendLayout();
-            this.tabPageStudentTextbookSelection.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTextbookSelection)).BeginInit();
+            this.tabPageMinorManagement.SuspendLayout();
+            this.tabPageTextbookSubscription.SuspendLayout();
             this.tabPageTeachingMaterialAccountInformation.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAccountingInformation)).BeginInit();
-            this.tabPageTextbookSubscription.SuspendLayout();
-            this.tabPageMinorManagement.SuspendLayout();
+            this.tabPageStudentTextbookSelection.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTextbookSelection)).BeginInit();
+            this.tabControlTextbookManagement.SuspendLayout();
+            this.gpb_Record.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gv_Record)).BeginInit();
+            this.gpb_BookPurchase.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gv_Book)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControlTrainingManagement
@@ -220,7 +242,7 @@
             this.tabControlTrainingManagement.Location = new System.Drawing.Point(12, 12);
             this.tabControlTrainingManagement.Name = "tabControlTrainingManagement";
             this.tabControlTrainingManagement.SelectedIndex = 0;
-            this.tabControlTrainingManagement.Size = new System.Drawing.Size(1119, 684);
+            this.tabControlTrainingManagement.Size = new System.Drawing.Size(1621, 699);
             this.tabControlTrainingManagement.TabIndex = 0;
             // 
             // tabPageTrainingProgram
@@ -229,7 +251,7 @@
             this.tabPageTrainingProgram.Location = new System.Drawing.Point(4, 25);
             this.tabPageTrainingProgram.Name = "tabPageTrainingProgram";
             this.tabPageTrainingProgram.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageTrainingProgram.Size = new System.Drawing.Size(1111, 655);
+            this.tabPageTrainingProgram.Size = new System.Drawing.Size(1529, 692);
             this.tabPageTrainingProgram.TabIndex = 1;
             this.tabPageTrainingProgram.Text = "培养方案";
             this.tabPageTrainingProgram.UseVisualStyleBackColor = true;
@@ -245,7 +267,7 @@
             this.tabControlTrainingProgram.Location = new System.Drawing.Point(-4, 0);
             this.tabControlTrainingProgram.Name = "tabControlTrainingProgram";
             this.tabControlTrainingProgram.SelectedIndex = 0;
-            this.tabControlTrainingProgram.Size = new System.Drawing.Size(1119, 659);
+            this.tabControlTrainingProgram.Size = new System.Drawing.Size(1537, 696);
             this.tabControlTrainingProgram.TabIndex = 0;
             // 
             // tabPageGuideTrainingProgram
@@ -254,7 +276,7 @@
             this.tabPageGuideTrainingProgram.Location = new System.Drawing.Point(4, 25);
             this.tabPageGuideTrainingProgram.Name = "tabPageGuideTrainingProgram";
             this.tabPageGuideTrainingProgram.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageGuideTrainingProgram.Size = new System.Drawing.Size(1111, 630);
+            this.tabPageGuideTrainingProgram.Size = new System.Drawing.Size(1529, 667);
             this.tabPageGuideTrainingProgram.TabIndex = 0;
             this.tabPageGuideTrainingProgram.Text = "指导培养方案";
             this.tabPageGuideTrainingProgram.UseVisualStyleBackColor = true;
@@ -278,7 +300,7 @@
             this.dataGridViewGuideTrainingProgram.Location = new System.Drawing.Point(4, 4);
             this.dataGridViewGuideTrainingProgram.Name = "dataGridViewGuideTrainingProgram";
             this.dataGridViewGuideTrainingProgram.RowTemplate.Height = 27;
-            this.dataGridViewGuideTrainingProgram.Size = new System.Drawing.Size(1107, 623);
+            this.dataGridViewGuideTrainingProgram.Size = new System.Drawing.Size(1525, 660);
             this.dataGridViewGuideTrainingProgram.TabIndex = 0;
             // 
             // ColumnSerialNumber
@@ -374,7 +396,7 @@
             this.tabPageImplementationPlan.Controls.Add(this.dataGridViewImplementationPlan);
             this.tabPageImplementationPlan.Location = new System.Drawing.Point(4, 25);
             this.tabPageImplementationPlan.Name = "tabPageImplementationPlan";
-            this.tabPageImplementationPlan.Size = new System.Drawing.Size(1111, 630);
+            this.tabPageImplementationPlan.Size = new System.Drawing.Size(1529, 667);
             this.tabPageImplementationPlan.TabIndex = 2;
             this.tabPageImplementationPlan.Text = "执行计划";
             this.tabPageImplementationPlan.UseVisualStyleBackColor = true;
@@ -399,7 +421,7 @@
             this.dataGridViewImplementationPlan.Location = new System.Drawing.Point(0, 4);
             this.dataGridViewImplementationPlan.Name = "dataGridViewImplementationPlan";
             this.dataGridViewImplementationPlan.RowTemplate.Height = 27;
-            this.dataGridViewImplementationPlan.Size = new System.Drawing.Size(1108, 630);
+            this.dataGridViewImplementationPlan.Size = new System.Drawing.Size(1526, 667);
             this.dataGridViewImplementationPlan.TabIndex = 0;
             // 
             // dataGridViewTextBoxColumn2
@@ -457,7 +479,7 @@
             this.tabPageCurriculum.Controls.Add(this.tabControlCurriculum);
             this.tabPageCurriculum.Location = new System.Drawing.Point(4, 25);
             this.tabPageCurriculum.Name = "tabPageCurriculum";
-            this.tabPageCurriculum.Size = new System.Drawing.Size(1111, 655);
+            this.tabPageCurriculum.Size = new System.Drawing.Size(1038, 614);
             this.tabPageCurriculum.TabIndex = 2;
             this.tabPageCurriculum.Text = "我的课表";
             this.tabPageCurriculum.UseVisualStyleBackColor = true;
@@ -472,7 +494,7 @@
             this.tabControlCurriculum.Location = new System.Drawing.Point(0, 0);
             this.tabControlCurriculum.Name = "tabControlCurriculum";
             this.tabControlCurriculum.SelectedIndex = 0;
-            this.tabControlCurriculum.Size = new System.Drawing.Size(800, 442);
+            this.tabControlCurriculum.Size = new System.Drawing.Size(727, 401);
             this.tabControlCurriculum.TabIndex = 0;
             // 
             // tabPageSemesterTheoryCourseSchedule
@@ -481,7 +503,7 @@
             this.tabPageSemesterTheoryCourseSchedule.Location = new System.Drawing.Point(4, 25);
             this.tabPageSemesterTheoryCourseSchedule.Name = "tabPageSemesterTheoryCourseSchedule";
             this.tabPageSemesterTheoryCourseSchedule.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageSemesterTheoryCourseSchedule.Size = new System.Drawing.Size(792, 413);
+            this.tabPageSemesterTheoryCourseSchedule.Size = new System.Drawing.Size(719, 372);
             this.tabPageSemesterTheoryCourseSchedule.TabIndex = 0;
             this.tabPageSemesterTheoryCourseSchedule.Text = "学期理论课表";
             this.tabPageSemesterTheoryCourseSchedule.UseVisualStyleBackColor = true;
@@ -505,7 +527,7 @@
             this.dataGridViewSemesterTimetable.Location = new System.Drawing.Point(-1, 0);
             this.dataGridViewSemesterTimetable.Name = "dataGridViewSemesterTimetable";
             this.dataGridViewSemesterTimetable.RowTemplate.Height = 27;
-            this.dataGridViewSemesterTimetable.Size = new System.Drawing.Size(1105, 627);
+            this.dataGridViewSemesterTimetable.Size = new System.Drawing.Size(1032, 586);
             this.dataGridViewSemesterTimetable.TabIndex = 0;
             // 
             // ColumnNoon
@@ -636,7 +658,7 @@
             this.tabPageCourseSelection.Controls.Add(this.tabControl_TrainingManage);
             this.tabPageCourseSelection.Location = new System.Drawing.Point(4, 25);
             this.tabPageCourseSelection.Name = "tabPageCourseSelection";
-            this.tabPageCourseSelection.Size = new System.Drawing.Size(1111, 655);
+            this.tabPageCourseSelection.Size = new System.Drawing.Size(1246, 712);
             this.tabPageCourseSelection.TabIndex = 3;
             this.tabPageCourseSelection.Text = "培养管理";
             this.tabPageCourseSelection.UseVisualStyleBackColor = true;
@@ -656,7 +678,7 @@
             this.tabControl_TrainingManage.Location = new System.Drawing.Point(-4, 0);
             this.tabControl_TrainingManage.Name = "tabControl_TrainingManage";
             this.tabControl_TrainingManage.SelectedIndex = 0;
-            this.tabControl_TrainingManage.Size = new System.Drawing.Size(1115, 659);
+            this.tabControl_TrainingManage.Size = new System.Drawing.Size(1250, 716);
             this.tabControl_TrainingManage.TabIndex = 0;
             // 
             // tabPageQueryElectiveCourses
@@ -671,14 +693,14 @@
             this.tabPageQueryElectiveCourses.Location = new System.Drawing.Point(4, 25);
             this.tabPageQueryElectiveCourses.Name = "tabPageQueryElectiveCourses";
             this.tabPageQueryElectiveCourses.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageQueryElectiveCourses.Size = new System.Drawing.Size(1107, 630);
+            this.tabPageQueryElectiveCourses.Size = new System.Drawing.Size(1525, 667);
             this.tabPageQueryElectiveCourses.TabIndex = 0;
             this.tabPageQueryElectiveCourses.Text = "查询选课课程";
             this.tabPageQueryElectiveCourses.UseVisualStyleBackColor = true;
             // 
             // buttonSearch
             // 
-            this.buttonSearch.Location = new System.Drawing.Point(301, 195);
+            this.buttonSearch.Location = new System.Drawing.Point(417, 306);
             this.buttonSearch.Name = "buttonSearch";
             this.buttonSearch.Size = new System.Drawing.Size(139, 28);
             this.buttonSearch.TabIndex = 6;
@@ -691,7 +713,7 @@
             this.labelCourseSelectionCategoryMark.AutoSize = true;
             this.labelCourseSelectionCategoryMark.Font = new System.Drawing.Font("宋体", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.labelCourseSelectionCategoryMark.ForeColor = System.Drawing.Color.Red;
-            this.labelCourseSelectionCategoryMark.Location = new System.Drawing.Point(635, 101);
+            this.labelCourseSelectionCategoryMark.Location = new System.Drawing.Point(719, 204);
             this.labelCourseSelectionCategoryMark.Name = "labelCourseSelectionCategoryMark";
             this.labelCourseSelectionCategoryMark.Size = new System.Drawing.Size(26, 28);
             this.labelCourseSelectionCategoryMark.TabIndex = 5;
@@ -702,7 +724,7 @@
             this.labelTermMark.AutoSize = true;
             this.labelTermMark.Font = new System.Drawing.Font("宋体", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.labelTermMark.ForeColor = System.Drawing.Color.Red;
-            this.labelTermMark.Location = new System.Drawing.Point(635, 53);
+            this.labelTermMark.Location = new System.Drawing.Point(719, 156);
             this.labelTermMark.Name = "labelTermMark";
             this.labelTermMark.Size = new System.Drawing.Size(26, 28);
             this.labelTermMark.TabIndex = 4;
@@ -712,7 +734,7 @@
             // 
             this.comboBox2.Font = new System.Drawing.Font("宋体", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(353, 100);
+            this.comboBox2.Location = new System.Drawing.Point(437, 203);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(255, 33);
             this.comboBox2.TabIndex = 3;
@@ -722,7 +744,7 @@
             // 
             this.comboBox1.Font = new System.Drawing.Font("宋体", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(353, 48);
+            this.comboBox1.Location = new System.Drawing.Point(437, 151);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(255, 33);
             this.comboBox1.TabIndex = 2;
@@ -732,7 +754,7 @@
             // 
             this.labelCourseSelectionCategory.AutoSize = true;
             this.labelCourseSelectionCategory.Font = new System.Drawing.Font("宋体", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.labelCourseSelectionCategory.Location = new System.Drawing.Point(188, 100);
+            this.labelCourseSelectionCategory.Location = new System.Drawing.Point(272, 203);
             this.labelCourseSelectionCategory.Name = "labelCourseSelectionCategory";
             this.labelCourseSelectionCategory.Size = new System.Drawing.Size(137, 25);
             this.labelCourseSelectionCategory.TabIndex = 1;
@@ -742,7 +764,7 @@
             // 
             this.labelTerm.AutoSize = true;
             this.labelTerm.Font = new System.Drawing.Font("宋体", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.labelTerm.Location = new System.Drawing.Point(188, 47);
+            this.labelTerm.Location = new System.Drawing.Point(272, 150);
             this.labelTerm.Name = "labelTerm";
             this.labelTerm.Size = new System.Drawing.Size(137, 25);
             this.labelTerm.TabIndex = 0;
@@ -757,35 +779,55 @@
             this.tabPageStudentSelectionCenter.Location = new System.Drawing.Point(4, 25);
             this.tabPageStudentSelectionCenter.Name = "tabPageStudentSelectionCenter";
             this.tabPageStudentSelectionCenter.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageStudentSelectionCenter.Size = new System.Drawing.Size(1107, 630);
+            this.tabPageStudentSelectionCenter.Size = new System.Drawing.Size(1034, 589);
             this.tabPageStudentSelectionCenter.TabIndex = 1;
             this.tabPageStudentSelectionCenter.Text = "学生选课中心";
             this.tabPageStudentSelectionCenter.UseVisualStyleBackColor = true;
             // 
+            // btn_DropClass
+            // 
+            this.btn_DropClass.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btn_DropClass.Font = new System.Drawing.Font("宋体", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btn_DropClass.Location = new System.Drawing.Point(487, 340);
+            this.btn_DropClass.Name = "btn_DropClass";
+            this.btn_DropClass.Size = new System.Drawing.Size(125, 59);
+            this.btn_DropClass.TabIndex = 3;
+            this.btn_DropClass.Text = "退课";
+            this.btn_DropClass.UseVisualStyleBackColor = true;
+            this.btn_DropClass.Click += new System.EventHandler(this.btn_DropClass_Click);
+            // 
+            // btn_SelectCoures
+            // 
+            this.btn_SelectCoures.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btn_SelectCoures.Font = new System.Drawing.Font("宋体", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btn_SelectCoures.Location = new System.Drawing.Point(487, 123);
+            this.btn_SelectCoures.Name = "btn_SelectCoures";
+            this.btn_SelectCoures.Size = new System.Drawing.Size(125, 59);
+            this.btn_SelectCoures.TabIndex = 2;
+            this.btn_SelectCoures.Text = "选课";
+            this.btn_SelectCoures.UseVisualStyleBackColor = true;
+            this.btn_SelectCoures.Click += new System.EventHandler(this.btn_SelectCoures_Click);
+            // 
             // dgv_SelectedCourse
             // 
-            this.dgv_SelectedCourse.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgv_SelectedCourse.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dgv_SelectedCourse.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgv_SelectedCourse.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_SelectedCourse.Location = new System.Drawing.Point(644, 0);
             this.dgv_SelectedCourse.Name = "dgv_SelectedCourse";
             this.dgv_SelectedCourse.RowTemplate.Height = 27;
-            this.dgv_SelectedCourse.Size = new System.Drawing.Size(464, 630);
+            this.dgv_SelectedCourse.Size = new System.Drawing.Size(391, 589);
             this.dgv_SelectedCourse.TabIndex = 1;
             // 
             // dgv_AllCourses
             // 
-            this.dgv_AllCourses.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgv_AllCourses.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dgv_AllCourses.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgv_AllCourses.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_AllCourses.Location = new System.Drawing.Point(0, 0);
             this.dgv_AllCourses.Name = "dgv_AllCourses";
             this.dgv_AllCourses.RowTemplate.Height = 27;
-            this.dgv_AllCourses.Size = new System.Drawing.Size(457, 630);
+            this.dgv_AllCourses.Size = new System.Drawing.Size(384, 589);
             this.dgv_AllCourses.TabIndex = 0;
             // 
             // tabPageStudentPreselectionManagement
@@ -793,7 +835,7 @@
             this.tabPageStudentPreselectionManagement.Controls.Add(this.dataGridViewStudentPreselectionManagement);
             this.tabPageStudentPreselectionManagement.Location = new System.Drawing.Point(4, 25);
             this.tabPageStudentPreselectionManagement.Name = "tabPageStudentPreselectionManagement";
-            this.tabPageStudentPreselectionManagement.Size = new System.Drawing.Size(1107, 630);
+            this.tabPageStudentPreselectionManagement.Size = new System.Drawing.Size(1034, 589);
             this.tabPageStudentPreselectionManagement.TabIndex = 2;
             this.tabPageStudentPreselectionManagement.Text = "学生预选管理";
             this.tabPageStudentPreselectionManagement.UseVisualStyleBackColor = true;
@@ -815,7 +857,7 @@
             this.dataGridViewStudentPreselectionManagement.Location = new System.Drawing.Point(4, 4);
             this.dataGridViewStudentPreselectionManagement.Name = "dataGridViewStudentPreselectionManagement";
             this.dataGridViewStudentPreselectionManagement.RowTemplate.Height = 27;
-            this.dataGridViewStudentPreselectionManagement.Size = new System.Drawing.Size(1100, 626);
+            this.dataGridViewStudentPreselectionManagement.Size = new System.Drawing.Size(1027, 585);
             this.dataGridViewStudentPreselectionManagement.TabIndex = 0;
             // 
             // ColumnNumber
@@ -855,12 +897,76 @@
             // 
             // tabPageClassroomLoanApplication
             // 
+            this.tabPageClassroomLoanApplication.Controls.Add(this.groupBox1);
             this.tabPageClassroomLoanApplication.Location = new System.Drawing.Point(4, 25);
             this.tabPageClassroomLoanApplication.Name = "tabPageClassroomLoanApplication";
-            this.tabPageClassroomLoanApplication.Size = new System.Drawing.Size(1107, 630);
+            this.tabPageClassroomLoanApplication.Size = new System.Drawing.Size(1242, 687);
             this.tabPageClassroomLoanApplication.TabIndex = 3;
             this.tabPageClassroomLoanApplication.Text = "教室借用申请";
             this.tabPageClassroomLoanApplication.UseVisualStyleBackColor = true;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.dgv_ClassroomBorrow);
+            this.groupBox1.Controls.Add(this.btn_ClassroomBorrow);
+            this.groupBox1.Controls.Add(this.button2);
+            this.groupBox1.Controls.Add(this.lbl_ClassroomBorrow);
+            this.groupBox1.Location = new System.Drawing.Point(7, 24);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(1101, 603);
+            this.groupBox1.TabIndex = 4;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "教室借用";
+            // 
+            // dgv_ClassroomBorrow
+            // 
+            this.dgv_ClassroomBorrow.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("宋体", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_ClassroomBorrow.DefaultCellStyle = dataGridViewCellStyle9;
+            this.dgv_ClassroomBorrow.Location = new System.Drawing.Point(16, 24);
+            this.dgv_ClassroomBorrow.Name = "dgv_ClassroomBorrow";
+            this.dgv_ClassroomBorrow.ReadOnly = true;
+            this.dgv_ClassroomBorrow.RowTemplate.Height = 27;
+            this.dgv_ClassroomBorrow.Size = new System.Drawing.Size(1079, 410);
+            this.dgv_ClassroomBorrow.TabIndex = 0;
+            // 
+            // btn_ClassroomBorrow
+            // 
+            this.btn_ClassroomBorrow.Font = new System.Drawing.Font("宋体", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btn_ClassroomBorrow.Location = new System.Drawing.Point(233, 501);
+            this.btn_ClassroomBorrow.Name = "btn_ClassroomBorrow";
+            this.btn_ClassroomBorrow.Size = new System.Drawing.Size(149, 53);
+            this.btn_ClassroomBorrow.TabIndex = 2;
+            this.btn_ClassroomBorrow.Text = "借用";
+            this.btn_ClassroomBorrow.UseVisualStyleBackColor = true;
+            this.btn_ClassroomBorrow.Click += new System.EventHandler(this.btn_ClassroomBorrow_Click);
+            // 
+            // button2
+            // 
+            this.button2.Font = new System.Drawing.Font("宋体", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.button2.Location = new System.Drawing.Point(635, 501);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(149, 53);
+            this.button2.TabIndex = 3;
+            this.button2.Text = "退借";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // lbl_ClassroomBorrow
+            // 
+            this.lbl_ClassroomBorrow.AutoSize = true;
+            this.lbl_ClassroomBorrow.Font = new System.Drawing.Font("宋体", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.lbl_ClassroomBorrow.Location = new System.Drawing.Point(939, 448);
+            this.lbl_ClassroomBorrow.Name = "lbl_ClassroomBorrow";
+            this.lbl_ClassroomBorrow.Size = new System.Drawing.Size(133, 57);
+            this.lbl_ClassroomBorrow.TabIndex = 1;
+            this.lbl_ClassroomBorrow.Text = "●：正常上课\r\n√：本人借用 \r\n▲：已被借用";
             // 
             // tabPageTeachingSchedule
             // 
@@ -886,9 +992,9 @@
             this.button_Search.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.button_Search.Location = new System.Drawing.Point(269, 247);
+            this.button_Search.Location = new System.Drawing.Point(465, 377);
             this.button_Search.Name = "button_Search";
-            this.button_Search.Size = new System.Drawing.Size(440, 292);
+            this.button_Search.Size = new System.Drawing.Size(190, 47);
             this.button_Search.TabIndex = 9;
             this.button_Search.Text = "查询";
             this.button_Search.UseVisualStyleBackColor = true;
@@ -901,9 +1007,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxTeacher.Font = new System.Drawing.Font("宋体", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.textBoxTeacher.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.textBoxTeacher.Location = new System.Drawing.Point(306, 174);
+            this.textBoxTeacher.Location = new System.Drawing.Point(505, 268);
             this.textBoxTeacher.Name = "textBoxTeacher";
-            this.textBoxTeacher.Size = new System.Drawing.Size(564, 36);
+            this.textBoxTeacher.Size = new System.Drawing.Size(238, 36);
             this.textBoxTeacher.TabIndex = 8;
             // 
             // textBoxCourseName
@@ -913,9 +1019,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxCourseName.Font = new System.Drawing.Font("宋体", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.textBoxCourseName.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.textBoxCourseName.Location = new System.Drawing.Point(306, 132);
+            this.textBoxCourseName.Location = new System.Drawing.Point(505, 226);
             this.textBoxCourseName.Name = "textBoxCourseName";
-            this.textBoxCourseName.Size = new System.Drawing.Size(564, 36);
+            this.textBoxCourseName.Size = new System.Drawing.Size(238, 36);
             this.textBoxCourseName.TabIndex = 7;
             // 
             // label_TermMark
@@ -925,7 +1031,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label_TermMark.AutoSize = true;
             this.label_TermMark.ForeColor = System.Drawing.Color.Red;
-            this.label_TermMark.Location = new System.Drawing.Point(562, 44);
+            this.label_TermMark.Location = new System.Drawing.Point(761, 138);
             this.label_TermMark.Name = "label_TermMark";
             this.label_TermMark.Size = new System.Drawing.Size(15, 15);
             this.label_TermMark.TabIndex = 6;
@@ -950,9 +1056,9 @@
             "海外教育学院",
             "图书馆",
             "现代教育技术中心"});
-            this.comboBoxOpenDepartment.Location = new System.Drawing.Point(306, 88);
+            this.comboBoxOpenDepartment.Location = new System.Drawing.Point(505, 182);
             this.comboBoxOpenDepartment.Name = "comboBoxOpenDepartment";
-            this.comboBoxOpenDepartment.Size = new System.Drawing.Size(564, 33);
+            this.comboBoxOpenDepartment.Size = new System.Drawing.Size(238, 33);
             this.comboBoxOpenDepartment.TabIndex = 5;
             this.comboBoxOpenDepartment.Text = "——请选择——";
             // 
@@ -970,9 +1076,9 @@
             "2019-2020-1",
             "2018-2019-2",
             "2018-2019-1"});
-            this.comboBoxTerm.Location = new System.Drawing.Point(306, 33);
+            this.comboBoxTerm.Location = new System.Drawing.Point(505, 127);
             this.comboBoxTerm.Name = "comboBoxTerm";
-            this.comboBoxTerm.Size = new System.Drawing.Size(564, 33);
+            this.comboBoxTerm.Size = new System.Drawing.Size(238, 33);
             this.comboBoxTerm.TabIndex = 4;
             // 
             // labelTeacher
@@ -982,7 +1088,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.labelTeacher.AutoSize = true;
             this.labelTeacher.Font = new System.Drawing.Font("宋体", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.labelTeacher.Location = new System.Drawing.Point(163, 175);
+            this.labelTeacher.Location = new System.Drawing.Point(362, 269);
             this.labelTeacher.Name = "labelTeacher";
             this.labelTeacher.Size = new System.Drawing.Size(137, 25);
             this.labelTeacher.TabIndex = 3;
@@ -995,7 +1101,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.labelCourseName.AutoSize = true;
             this.labelCourseName.Font = new System.Drawing.Font("宋体", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.labelCourseName.Location = new System.Drawing.Point(163, 132);
+            this.labelCourseName.Location = new System.Drawing.Point(362, 226);
             this.labelCourseName.Name = "labelCourseName";
             this.labelCourseName.Size = new System.Drawing.Size(137, 25);
             this.labelCourseName.TabIndex = 2;
@@ -1008,7 +1114,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.labelOpenDepartment.AutoSize = true;
             this.labelOpenDepartment.Font = new System.Drawing.Font("宋体", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.labelOpenDepartment.Location = new System.Drawing.Point(163, 88);
+            this.labelOpenDepartment.Location = new System.Drawing.Point(362, 182);
             this.labelOpenDepartment.Name = "labelOpenDepartment";
             this.labelOpenDepartment.Size = new System.Drawing.Size(137, 25);
             this.labelOpenDepartment.TabIndex = 1;
@@ -1021,7 +1127,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label_Term.AutoSize = true;
             this.label_Term.Font = new System.Drawing.Font("宋体", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label_Term.Location = new System.Drawing.Point(163, 41);
+            this.label_Term.Location = new System.Drawing.Point(362, 135);
             this.label_Term.Name = "label_Term";
             this.label_Term.Size = new System.Drawing.Size(137, 25);
             this.label_Term.TabIndex = 0;
@@ -1082,301 +1188,10 @@
             this.tabPageTextbookManagement.Controls.Add(this.tabControlTextbookManagement);
             this.tabPageTextbookManagement.Location = new System.Drawing.Point(4, 25);
             this.tabPageTextbookManagement.Name = "tabPageTextbookManagement";
-            this.tabPageTextbookManagement.Size = new System.Drawing.Size(1111, 655);
+            this.tabPageTextbookManagement.Size = new System.Drawing.Size(1613, 670);
             this.tabPageTextbookManagement.TabIndex = 4;
             this.tabPageTextbookManagement.Text = "教材管理";
             this.tabPageTextbookManagement.UseVisualStyleBackColor = true;
-            // 
-            // tabControlTextbookManagement
-            // 
-            this.tabControlTextbookManagement.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tabControlTextbookManagement.Controls.Add(this.tabPageStudentTextbookSelection);
-            this.tabControlTextbookManagement.Controls.Add(this.tabPageTeachingMaterialAccountInformation);
-            this.tabControlTextbookManagement.Controls.Add(this.tabPageTextbookSubscription);
-            this.tabControlTextbookManagement.Location = new System.Drawing.Point(-4, 0);
-            this.tabControlTextbookManagement.Name = "tabControlTextbookManagement";
-            this.tabControlTextbookManagement.SelectedIndex = 0;
-            this.tabControlTextbookManagement.Size = new System.Drawing.Size(811, 449);
-            this.tabControlTextbookManagement.TabIndex = 0;
-            // 
-            // tabPageStudentTextbookSelection
-            // 
-            this.tabPageStudentTextbookSelection.Controls.Add(this.dataGridViewTextbookSelection);
-            this.tabPageStudentTextbookSelection.Controls.Add(this.label1);
-            this.tabPageStudentTextbookSelection.Location = new System.Drawing.Point(4, 25);
-            this.tabPageStudentTextbookSelection.Name = "tabPageStudentTextbookSelection";
-            this.tabPageStudentTextbookSelection.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageStudentTextbookSelection.Size = new System.Drawing.Size(803, 420);
-            this.tabPageStudentTextbookSelection.TabIndex = 0;
-            this.tabPageStudentTextbookSelection.Text = "学生教材选用";
-            this.tabPageStudentTextbookSelection.UseVisualStyleBackColor = true;
-            // 
-            // dataGridViewTextbookSelection
-            // 
-            this.dataGridViewTextbookSelection.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridViewTextbookSelection.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewTextbookSelection.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ColumnSelectedTeachers,
-            this.ColumnInstructor,
-            this.Column_CourseTitle,
-            this.Column_Term,
-            this.ColumnNumberOfBooksOrdered,
-            this.ColumnTextbookName,
-            this.ColumnISBN,
-            this.ColumnTextbookAuthor,
-            this.ColumnPublishingHouse,
-            this.ColumnEdition,
-            this.Column_Operation});
-            this.dataGridViewTextbookSelection.Location = new System.Drawing.Point(0, 25);
-            this.dataGridViewTextbookSelection.Name = "dataGridViewTextbookSelection";
-            this.dataGridViewTextbookSelection.RowTemplate.Height = 27;
-            this.dataGridViewTextbookSelection.Size = new System.Drawing.Size(800, 395);
-            this.dataGridViewTextbookSelection.TabIndex = 1;
-            // 
-            // ColumnSelectedTeachers
-            // 
-            this.ColumnSelectedTeachers.HeaderText = "选订教师";
-            this.ColumnSelectedTeachers.Name = "ColumnSelectedTeachers";
-            // 
-            // ColumnInstructor
-            // 
-            this.ColumnInstructor.HeaderText = "授课老师";
-            this.ColumnInstructor.Name = "ColumnInstructor";
-            // 
-            // Column_CourseTitle
-            // 
-            this.Column_CourseTitle.HeaderText = "课程名称";
-            this.Column_CourseTitle.Name = "Column_CourseTitle";
-            // 
-            // Column_Term
-            // 
-            this.Column_Term.HeaderText = "学年学期";
-            this.Column_Term.Name = "Column_Term";
-            // 
-            // ColumnNumberOfBooksOrdered
-            // 
-            this.ColumnNumberOfBooksOrdered.HeaderText = "订购册数";
-            this.ColumnNumberOfBooksOrdered.Name = "ColumnNumberOfBooksOrdered";
-            // 
-            // ColumnTextbookName
-            // 
-            this.ColumnTextbookName.HeaderText = "教材名称";
-            this.ColumnTextbookName.Name = "ColumnTextbookName";
-            // 
-            // ColumnISBN
-            // 
-            this.ColumnISBN.HeaderText = "ISBN号";
-            this.ColumnISBN.Name = "ColumnISBN";
-            // 
-            // ColumnTextbookAuthor
-            // 
-            this.ColumnTextbookAuthor.HeaderText = "教材作者";
-            this.ColumnTextbookAuthor.Name = "ColumnTextbookAuthor";
-            // 
-            // ColumnPublishingHouse
-            // 
-            this.ColumnPublishingHouse.HeaderText = "出版社";
-            this.ColumnPublishingHouse.Name = "ColumnPublishingHouse";
-            // 
-            // ColumnEdition
-            // 
-            this.ColumnEdition.HeaderText = "版次";
-            this.ColumnEdition.Name = "ColumnEdition";
-            // 
-            // Column_Operation
-            // 
-            this.Column_Operation.HeaderText = "操作";
-            this.Column_Operation.Name = "Column_Operation";
-            // 
-            // label1
-            // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.AutoSize = true;
-            this.label1.ForeColor = System.Drawing.Color.Red;
-            this.label1.Location = new System.Drawing.Point(7, 7);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(375, 15);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "提示：当前不是教材订用时间，不能进行教材订用！ 　";
-            // 
-            // tabPageTeachingMaterialAccountInformation
-            // 
-            this.tabPageTeachingMaterialAccountInformation.Controls.Add(this.dataGridViewAccountingInformation);
-            this.tabPageTeachingMaterialAccountInformation.Location = new System.Drawing.Point(4, 25);
-            this.tabPageTeachingMaterialAccountInformation.Name = "tabPageTeachingMaterialAccountInformation";
-            this.tabPageTeachingMaterialAccountInformation.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageTeachingMaterialAccountInformation.Size = new System.Drawing.Size(803, 420);
-            this.tabPageTeachingMaterialAccountInformation.TabIndex = 1;
-            this.tabPageTeachingMaterialAccountInformation.Text = "教材账目信息";
-            this.tabPageTeachingMaterialAccountInformation.UseVisualStyleBackColor = true;
-            // 
-            // dataGridViewAccountingInformation
-            // 
-            this.dataGridViewAccountingInformation.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridViewAccountingInformation.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewAccountingInformation.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column__Term,
-            this.Column__CourseTitle,
-            this.dataGridViewTextBoxColumn24,
-            this.Column_TextbookName,
-            this.Column_ISBN,
-            this.ColumnAuthor,
-            this.Column_PublishingHouse,
-            this.Column_Edition,
-            this.ColumnAmount,
-            this.ColumnNumberOfBooks,
-            this.ColumnDate,
-            this.ColumnTheWay,
-            this.ColumnRemarks});
-            this.dataGridViewAccountingInformation.Location = new System.Drawing.Point(0, 4);
-            this.dataGridViewAccountingInformation.Name = "dataGridViewAccountingInformation";
-            this.dataGridViewAccountingInformation.RowTemplate.Height = 27;
-            this.dataGridViewAccountingInformation.Size = new System.Drawing.Size(807, 413);
-            this.dataGridViewAccountingInformation.TabIndex = 0;
-            // 
-            // Column__Term
-            // 
-            this.Column__Term.HeaderText = "学年学期";
-            this.Column__Term.Name = "Column__Term";
-            // 
-            // Column__CourseTitle
-            // 
-            this.Column__CourseTitle.HeaderText = "课程名称";
-            this.Column__CourseTitle.Name = "Column__CourseTitle";
-            // 
-            // dataGridViewTextBoxColumn24
-            // 
-            this.dataGridViewTextBoxColumn24.HeaderText = "课程性质";
-            this.dataGridViewTextBoxColumn24.Name = "dataGridViewTextBoxColumn24";
-            // 
-            // Column_TextbookName
-            // 
-            this.Column_TextbookName.HeaderText = "教材名称";
-            this.Column_TextbookName.Name = "Column_TextbookName";
-            // 
-            // Column_ISBN
-            // 
-            this.Column_ISBN.HeaderText = "ISBN书号";
-            this.Column_ISBN.Name = "Column_ISBN";
-            // 
-            // ColumnAuthor
-            // 
-            this.ColumnAuthor.HeaderText = "作者";
-            this.ColumnAuthor.Name = "ColumnAuthor";
-            // 
-            // Column_PublishingHouse
-            // 
-            this.Column_PublishingHouse.HeaderText = "出版社";
-            this.Column_PublishingHouse.Name = "Column_PublishingHouse";
-            // 
-            // Column_Edition
-            // 
-            this.Column_Edition.HeaderText = "版次";
-            this.Column_Edition.Name = "Column_Edition";
-            // 
-            // ColumnAmount
-            // 
-            this.ColumnAmount.HeaderText = "金额";
-            this.ColumnAmount.Name = "ColumnAmount";
-            // 
-            // ColumnNumberOfBooks
-            // 
-            this.ColumnNumberOfBooks.HeaderText = "册数";
-            this.ColumnNumberOfBooks.Name = "ColumnNumberOfBooks";
-            // 
-            // ColumnDate
-            // 
-            this.ColumnDate.HeaderText = "日期";
-            this.ColumnDate.Name = "ColumnDate";
-            // 
-            // ColumnTheWay
-            // 
-            this.ColumnTheWay.HeaderText = "方式";
-            this.ColumnTheWay.Name = "ColumnTheWay";
-            // 
-            // ColumnRemarks
-            // 
-            this.ColumnRemarks.HeaderText = "备注";
-            this.ColumnRemarks.Name = "ColumnRemarks";
-            // 
-            // tabPageTextbookSubscription
-            // 
-            this.tabPageTextbookSubscription.Controls.Add(this.button__Search);
-            this.tabPageTextbookSubscription.Controls.Add(this.label__TermMark);
-            this.tabPageTextbookSubscription.Controls.Add(this.comboBox_Term);
-            this.tabPageTextbookSubscription.Controls.Add(this.label__Term);
-            this.tabPageTextbookSubscription.Location = new System.Drawing.Point(4, 25);
-            this.tabPageTextbookSubscription.Name = "tabPageTextbookSubscription";
-            this.tabPageTextbookSubscription.Size = new System.Drawing.Size(803, 420);
-            this.tabPageTextbookSubscription.TabIndex = 2;
-            this.tabPageTextbookSubscription.Text = "教材征订";
-            this.tabPageTextbookSubscription.UseVisualStyleBackColor = true;
-            // 
-            // button__Search
-            // 
-            this.button__Search.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.button__Search.Location = new System.Drawing.Point(273, 158);
-            this.button__Search.Name = "button__Search";
-            this.button__Search.Size = new System.Drawing.Size(139, 87);
-            this.button__Search.TabIndex = 3;
-            this.button__Search.Text = "查询";
-            this.button__Search.UseVisualStyleBackColor = true;
-            // 
-            // label__TermMark
-            // 
-            this.label__TermMark.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label__TermMark.AutoSize = true;
-            this.label__TermMark.Font = new System.Drawing.Font("宋体", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label__TermMark.ForeColor = System.Drawing.Color.Red;
-            this.label__TermMark.Location = new System.Drawing.Point(495, 75);
-            this.label__TermMark.Name = "label__TermMark";
-            this.label__TermMark.Size = new System.Drawing.Size(25, 25);
-            this.label__TermMark.TabIndex = 2;
-            this.label__TermMark.Text = "*";
-            // 
-            // comboBox_Term
-            // 
-            this.comboBox_Term.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboBox_Term.Font = new System.Drawing.Font("宋体", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.comboBox_Term.FormattingEnabled = true;
-            this.comboBox_Term.Items.AddRange(new object[] {
-            "2020",
-            "2019",
-            "2018",
-            "2017",
-            "2016",
-            "2015"});
-            this.comboBox_Term.Location = new System.Drawing.Point(273, 67);
-            this.comboBox_Term.Name = "comboBox_Term";
-            this.comboBox_Term.Size = new System.Drawing.Size(234, 33);
-            this.comboBox_Term.TabIndex = 1;
-            // 
-            // label__Term
-            // 
-            this.label__Term.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label__Term.AutoSize = true;
-            this.label__Term.Font = new System.Drawing.Font("宋体", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label__Term.Location = new System.Drawing.Point(164, 70);
-            this.label__Term.Name = "label__Term";
-            this.label__Term.Size = new System.Drawing.Size(87, 25);
-            this.label__Term.TabIndex = 0;
-            this.label__Term.Text = "学年：";
             // 
             // tabPageMinorManagement
             // 
@@ -1391,7 +1206,7 @@
             this.tabPageMinorManagement.Controls.Add(this.labelMinorSchool);
             this.tabPageMinorManagement.Location = new System.Drawing.Point(4, 25);
             this.tabPageMinorManagement.Name = "tabPageMinorManagement";
-            this.tabPageMinorManagement.Size = new System.Drawing.Size(1111, 655);
+            this.tabPageMinorManagement.Size = new System.Drawing.Size(1246, 712);
             this.tabPageMinorManagement.TabIndex = 5;
             this.tabPageMinorManagement.Text = "辅修管理";
             this.tabPageMinorManagement.UseVisualStyleBackColor = true;
@@ -1403,7 +1218,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.button___Search.Location = new System.Drawing.Point(270, 207);
             this.button___Search.Name = "button___Search";
-            this.button___Search.Size = new System.Drawing.Size(469, 297);
+            this.button___Search.Size = new System.Drawing.Size(604, 354);
             this.button___Search.TabIndex = 8;
             this.button___Search.Text = "查询";
             this.button___Search.UseVisualStyleBackColor = true;
@@ -1444,7 +1259,7 @@
             this.comboBox5.FormattingEnabled = true;
             this.comboBox5.Location = new System.Drawing.Point(289, 138);
             this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(572, 33);
+            this.comboBox5.Size = new System.Drawing.Size(707, 33);
             this.comboBox5.TabIndex = 5;
             this.comboBox5.Text = "——请选择——";
             // 
@@ -1468,7 +1283,7 @@
             "2011"});
             this.comboBox4.Location = new System.Drawing.Point(289, 95);
             this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(572, 33);
+            this.comboBox4.Size = new System.Drawing.Size(707, 33);
             this.comboBox4.TabIndex = 4;
             this.comboBox4.Text = "——请选择——";
             // 
@@ -1494,7 +1309,7 @@
             "进修生"});
             this.comboBox3.Location = new System.Drawing.Point(289, 51);
             this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(572, 33);
+            this.comboBox3.Size = new System.Drawing.Size(707, 33);
             this.comboBox3.TabIndex = 3;
             // 
             // labelMinor
@@ -1536,33 +1351,396 @@
             this.labelMinorSchool.TabIndex = 0;
             this.labelMinorSchool.Text = "辅修院系：";
             // 
-            // btn_SelectCoures
+            // tabPageTextbookSubscription
             // 
-            this.btn_SelectCoures.Font = new System.Drawing.Font("宋体", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btn_SelectCoures.Location = new System.Drawing.Point(487, 123);
-            this.btn_SelectCoures.Name = "btn_SelectCoures";
-            this.btn_SelectCoures.Size = new System.Drawing.Size(125, 59);
-            this.btn_SelectCoures.TabIndex = 2;
-            this.btn_SelectCoures.Text = "选课";
-            this.btn_SelectCoures.UseVisualStyleBackColor = true;
-            this.btn_SelectCoures.Click += new System.EventHandler(this.btn_SelectCoures_Click);
+            this.tabPageTextbookSubscription.Controls.Add(this.btn_Record);
+            this.tabPageTextbookSubscription.Controls.Add(this.button1);
+            this.tabPageTextbookSubscription.Controls.Add(this.gpb_BookPurchase);
+            this.tabPageTextbookSubscription.Controls.Add(this.gpb_Record);
+            this.tabPageTextbookSubscription.Controls.Add(this.btn_BookPurchase);
+            this.tabPageTextbookSubscription.Location = new System.Drawing.Point(4, 25);
+            this.tabPageTextbookSubscription.Name = "tabPageTextbookSubscription";
+            this.tabPageTextbookSubscription.Size = new System.Drawing.Size(1606, 638);
+            this.tabPageTextbookSubscription.TabIndex = 2;
+            this.tabPageTextbookSubscription.Text = "教材征订";
+            this.tabPageTextbookSubscription.UseVisualStyleBackColor = true;
             // 
-            // btn_DropClass
+            // btn_BookPurchase
             // 
-            this.btn_DropClass.Font = new System.Drawing.Font("宋体", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btn_DropClass.Location = new System.Drawing.Point(487, 340);
-            this.btn_DropClass.Name = "btn_DropClass";
-            this.btn_DropClass.Size = new System.Drawing.Size(125, 59);
-            this.btn_DropClass.TabIndex = 3;
-            this.btn_DropClass.Text = "退课";
-            this.btn_DropClass.UseVisualStyleBackColor = true;
-            this.btn_DropClass.Click += new System.EventHandler(this.btn_DropClass_Click);
+            this.btn_BookPurchase.Location = new System.Drawing.Point(-237, -49);
+            this.btn_BookPurchase.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_BookPurchase.Name = "btn_BookPurchase";
+            this.btn_BookPurchase.Size = new System.Drawing.Size(85, 32);
+            this.btn_BookPurchase.TabIndex = 9;
+            this.btn_BookPurchase.Text = "订购教材";
+            this.btn_BookPurchase.UseVisualStyleBackColor = true;
+            // 
+            // tabPageTeachingMaterialAccountInformation
+            // 
+            this.tabPageTeachingMaterialAccountInformation.Controls.Add(this.dataGridViewAccountingInformation);
+            this.tabPageTeachingMaterialAccountInformation.Location = new System.Drawing.Point(4, 25);
+            this.tabPageTeachingMaterialAccountInformation.Name = "tabPageTeachingMaterialAccountInformation";
+            this.tabPageTeachingMaterialAccountInformation.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageTeachingMaterialAccountInformation.Size = new System.Drawing.Size(1486, 582);
+            this.tabPageTeachingMaterialAccountInformation.TabIndex = 1;
+            this.tabPageTeachingMaterialAccountInformation.Text = "教材账目信息";
+            this.tabPageTeachingMaterialAccountInformation.UseVisualStyleBackColor = true;
+            // 
+            // dataGridViewAccountingInformation
+            // 
+            this.dataGridViewAccountingInformation.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridViewAccountingInformation.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewAccountingInformation.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column__Term,
+            this.Column__CourseTitle,
+            this.dataGridViewTextBoxColumn24,
+            this.Column_TextbookName,
+            this.Column_ISBN,
+            this.ColumnAuthor,
+            this.Column_PublishingHouse,
+            this.Column_Edition,
+            this.ColumnAmount,
+            this.ColumnNumberOfBooks,
+            this.ColumnDate,
+            this.ColumnTheWay,
+            this.ColumnRemarks});
+            this.dataGridViewAccountingInformation.Location = new System.Drawing.Point(0, 4);
+            this.dataGridViewAccountingInformation.Name = "dataGridViewAccountingInformation";
+            this.dataGridViewAccountingInformation.RowTemplate.Height = 27;
+            this.dataGridViewAccountingInformation.Size = new System.Drawing.Size(1487, 575);
+            this.dataGridViewAccountingInformation.TabIndex = 0;
+            // 
+            // ColumnRemarks
+            // 
+            this.ColumnRemarks.HeaderText = "备注";
+            this.ColumnRemarks.Name = "ColumnRemarks";
+            // 
+            // ColumnTheWay
+            // 
+            this.ColumnTheWay.HeaderText = "方式";
+            this.ColumnTheWay.Name = "ColumnTheWay";
+            // 
+            // ColumnDate
+            // 
+            this.ColumnDate.HeaderText = "日期";
+            this.ColumnDate.Name = "ColumnDate";
+            // 
+            // ColumnNumberOfBooks
+            // 
+            this.ColumnNumberOfBooks.HeaderText = "册数";
+            this.ColumnNumberOfBooks.Name = "ColumnNumberOfBooks";
+            // 
+            // ColumnAmount
+            // 
+            this.ColumnAmount.HeaderText = "金额";
+            this.ColumnAmount.Name = "ColumnAmount";
+            // 
+            // Column_Edition
+            // 
+            this.Column_Edition.HeaderText = "版次";
+            this.Column_Edition.Name = "Column_Edition";
+            // 
+            // Column_PublishingHouse
+            // 
+            this.Column_PublishingHouse.HeaderText = "出版社";
+            this.Column_PublishingHouse.Name = "Column_PublishingHouse";
+            // 
+            // ColumnAuthor
+            // 
+            this.ColumnAuthor.HeaderText = "作者";
+            this.ColumnAuthor.Name = "ColumnAuthor";
+            // 
+            // Column_ISBN
+            // 
+            this.Column_ISBN.HeaderText = "ISBN书号";
+            this.Column_ISBN.Name = "Column_ISBN";
+            // 
+            // Column_TextbookName
+            // 
+            this.Column_TextbookName.HeaderText = "教材名称";
+            this.Column_TextbookName.Name = "Column_TextbookName";
+            // 
+            // dataGridViewTextBoxColumn24
+            // 
+            this.dataGridViewTextBoxColumn24.HeaderText = "课程性质";
+            this.dataGridViewTextBoxColumn24.Name = "dataGridViewTextBoxColumn24";
+            // 
+            // Column__CourseTitle
+            // 
+            this.Column__CourseTitle.HeaderText = "课程名称";
+            this.Column__CourseTitle.Name = "Column__CourseTitle";
+            // 
+            // Column__Term
+            // 
+            this.Column__Term.HeaderText = "学年学期";
+            this.Column__Term.Name = "Column__Term";
+            // 
+            // tabPageStudentTextbookSelection
+            // 
+            this.tabPageStudentTextbookSelection.Controls.Add(this.dataGridViewTextbookSelection);
+            this.tabPageStudentTextbookSelection.Controls.Add(this.label1);
+            this.tabPageStudentTextbookSelection.Location = new System.Drawing.Point(4, 25);
+            this.tabPageStudentTextbookSelection.Name = "tabPageStudentTextbookSelection";
+            this.tabPageStudentTextbookSelection.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageStudentTextbookSelection.Size = new System.Drawing.Size(1486, 582);
+            this.tabPageStudentTextbookSelection.TabIndex = 0;
+            this.tabPageStudentTextbookSelection.Text = "学生教材选用";
+            this.tabPageStudentTextbookSelection.UseVisualStyleBackColor = true;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.Color.Red;
+            this.label1.Location = new System.Drawing.Point(7, 7);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(375, 15);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "提示：当前不是教材订用时间，不能进行教材订用！ 　";
+            // 
+            // dataGridViewTextbookSelection
+            // 
+            this.dataGridViewTextbookSelection.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridViewTextbookSelection.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewTextbookSelection.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ColumnSelectedTeachers,
+            this.ColumnInstructor,
+            this.Column_CourseTitle,
+            this.Column_Term,
+            this.ColumnNumberOfBooksOrdered,
+            this.ColumnTextbookName,
+            this.ColumnISBN,
+            this.ColumnTextbookAuthor,
+            this.ColumnPublishingHouse,
+            this.ColumnEdition,
+            this.Column_Operation});
+            this.dataGridViewTextbookSelection.Location = new System.Drawing.Point(0, 25);
+            this.dataGridViewTextbookSelection.Name = "dataGridViewTextbookSelection";
+            this.dataGridViewTextbookSelection.RowTemplate.Height = 27;
+            this.dataGridViewTextbookSelection.Size = new System.Drawing.Size(1483, 557);
+            this.dataGridViewTextbookSelection.TabIndex = 1;
+            // 
+            // Column_Operation
+            // 
+            this.Column_Operation.HeaderText = "操作";
+            this.Column_Operation.Name = "Column_Operation";
+            // 
+            // ColumnEdition
+            // 
+            this.ColumnEdition.HeaderText = "版次";
+            this.ColumnEdition.Name = "ColumnEdition";
+            // 
+            // ColumnPublishingHouse
+            // 
+            this.ColumnPublishingHouse.HeaderText = "出版社";
+            this.ColumnPublishingHouse.Name = "ColumnPublishingHouse";
+            // 
+            // ColumnTextbookAuthor
+            // 
+            this.ColumnTextbookAuthor.HeaderText = "教材作者";
+            this.ColumnTextbookAuthor.Name = "ColumnTextbookAuthor";
+            // 
+            // ColumnISBN
+            // 
+            this.ColumnISBN.HeaderText = "ISBN号";
+            this.ColumnISBN.Name = "ColumnISBN";
+            // 
+            // ColumnTextbookName
+            // 
+            this.ColumnTextbookName.HeaderText = "教材名称";
+            this.ColumnTextbookName.Name = "ColumnTextbookName";
+            // 
+            // ColumnNumberOfBooksOrdered
+            // 
+            this.ColumnNumberOfBooksOrdered.HeaderText = "订购册数";
+            this.ColumnNumberOfBooksOrdered.Name = "ColumnNumberOfBooksOrdered";
+            // 
+            // Column_Term
+            // 
+            this.Column_Term.HeaderText = "学年学期";
+            this.Column_Term.Name = "Column_Term";
+            // 
+            // Column_CourseTitle
+            // 
+            this.Column_CourseTitle.HeaderText = "课程名称";
+            this.Column_CourseTitle.Name = "Column_CourseTitle";
+            // 
+            // ColumnInstructor
+            // 
+            this.ColumnInstructor.HeaderText = "授课老师";
+            this.ColumnInstructor.Name = "ColumnInstructor";
+            // 
+            // ColumnSelectedTeachers
+            // 
+            this.ColumnSelectedTeachers.HeaderText = "选订教师";
+            this.ColumnSelectedTeachers.Name = "ColumnSelectedTeachers";
+            // 
+            // tabControlTextbookManagement
+            // 
+            this.tabControlTextbookManagement.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tabControlTextbookManagement.Controls.Add(this.tabPageStudentTextbookSelection);
+            this.tabControlTextbookManagement.Controls.Add(this.tabPageTeachingMaterialAccountInformation);
+            this.tabControlTextbookManagement.Controls.Add(this.tabPageTextbookSubscription);
+            this.tabControlTextbookManagement.Location = new System.Drawing.Point(-4, 0);
+            this.tabControlTextbookManagement.Name = "tabControlTextbookManagement";
+            this.tabControlTextbookManagement.SelectedIndex = 0;
+            this.tabControlTextbookManagement.Size = new System.Drawing.Size(1614, 667);
+            this.tabControlTextbookManagement.TabIndex = 0;
+            // 
+            // gpb_Record
+            // 
+            this.gpb_Record.Controls.Add(this.btn_CancelAll);
+            this.gpb_Record.Controls.Add(this.btn_cancel);
+            this.gpb_Record.Controls.Add(this.gv_Record);
+            this.gpb_Record.Location = new System.Drawing.Point(28, 162);
+            this.gpb_Record.Margin = new System.Windows.Forms.Padding(2);
+            this.gpb_Record.Name = "gpb_Record";
+            this.gpb_Record.Padding = new System.Windows.Forms.Padding(2);
+            this.gpb_Record.Size = new System.Drawing.Size(1288, 296);
+            this.gpb_Record.TabIndex = 10;
+            this.gpb_Record.TabStop = false;
+            this.gpb_Record.Text = "订购记录";
+            // 
+            // btn_CancelAll
+            // 
+            this.btn_CancelAll.Font = new System.Drawing.Font("宋体", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btn_CancelAll.Location = new System.Drawing.Point(693, 254);
+            this.btn_CancelAll.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_CancelAll.Name = "btn_CancelAll";
+            this.btn_CancelAll.Size = new System.Drawing.Size(138, 33);
+            this.btn_CancelAll.TabIndex = 10;
+            this.btn_CancelAll.Text = "一键退订";
+            this.btn_CancelAll.UseVisualStyleBackColor = true;
+            this.btn_CancelAll.Click += new System.EventHandler(this.btn_CancelAll_Click);
+            // 
+            // btn_cancel
+            // 
+            this.btn_cancel.Font = new System.Drawing.Font("宋体", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btn_cancel.Location = new System.Drawing.Point(535, 254);
+            this.btn_cancel.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_cancel.Name = "btn_cancel";
+            this.btn_cancel.Size = new System.Drawing.Size(138, 33);
+            this.btn_cancel.TabIndex = 9;
+            this.btn_cancel.Text = "退订";
+            this.btn_cancel.UseVisualStyleBackColor = true;
+            this.btn_cancel.Click += new System.EventHandler(this.btn_cancel_Click);
+            // 
+            // gv_Record
+            // 
+            this.gv_Record.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gv_Record.Location = new System.Drawing.Point(21, 36);
+            this.gv_Record.Margin = new System.Windows.Forms.Padding(2);
+            this.gv_Record.Name = "gv_Record";
+            this.gv_Record.RowTemplate.Height = 44;
+            this.gv_Record.Size = new System.Drawing.Size(1255, 202);
+            this.gv_Record.TabIndex = 0;
+            // 
+            // btn_Record
+            // 
+            this.btn_Record.Location = new System.Drawing.Point(143, 33);
+            this.btn_Record.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_Record.Name = "btn_Record";
+            this.btn_Record.Size = new System.Drawing.Size(85, 32);
+            this.btn_Record.TabIndex = 13;
+            this.btn_Record.Text = "订购记录";
+            this.btn_Record.UseVisualStyleBackColor = true;
+            this.btn_Record.Click += new System.EventHandler(this.btn_Record_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(61, 33);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(85, 32);
+            this.button1.TabIndex = 12;
+            this.button1.Text = "订购教材";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // gpb_BookPurchase
+            // 
+            this.gpb_BookPurchase.Controls.Add(this.btn_Find);
+            this.gpb_BookPurchase.Controls.Add(this.label2);
+            this.gpb_BookPurchase.Controls.Add(this.btn_Purchase);
+            this.gpb_BookPurchase.Controls.Add(this.cmb_Term);
+            this.gpb_BookPurchase.Controls.Add(this.gv_Book);
+            this.gpb_BookPurchase.Location = new System.Drawing.Point(32, 90);
+            this.gpb_BookPurchase.Margin = new System.Windows.Forms.Padding(2);
+            this.gpb_BookPurchase.Name = "gpb_BookPurchase";
+            this.gpb_BookPurchase.Padding = new System.Windows.Forms.Padding(2);
+            this.gpb_BookPurchase.Size = new System.Drawing.Size(1288, 476);
+            this.gpb_BookPurchase.TabIndex = 11;
+            this.gpb_BookPurchase.TabStop = false;
+            this.gpb_BookPurchase.Text = "订购教材";
+            // 
+            // btn_Find
+            // 
+            this.btn_Find.Location = new System.Drawing.Point(774, 29);
+            this.btn_Find.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_Find.Name = "btn_Find";
+            this.btn_Find.Size = new System.Drawing.Size(69, 25);
+            this.btn_Find.TabIndex = 8;
+            this.btn_Find.Text = "查询";
+            this.btn_Find.UseVisualStyleBackColor = true;
+            this.btn_Find.Click += new System.EventHandler(this.btn_Find_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("宋体", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label2.Location = new System.Drawing.Point(498, 26);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(87, 25);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "学期：";
+            // 
+            // btn_Purchase
+            // 
+            this.btn_Purchase.Font = new System.Drawing.Font("宋体", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btn_Purchase.Location = new System.Drawing.Point(602, 422);
+            this.btn_Purchase.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_Purchase.Name = "btn_Purchase";
+            this.btn_Purchase.Size = new System.Drawing.Size(138, 33);
+            this.btn_Purchase.TabIndex = 3;
+            this.btn_Purchase.Text = "订购";
+            this.btn_Purchase.UseVisualStyleBackColor = true;
+            this.btn_Purchase.Click += new System.EventHandler(this.btn_Purchase_Click);
+            // 
+            // cmb_Term
+            // 
+            this.cmb_Term.FormattingEnabled = true;
+            this.cmb_Term.Location = new System.Drawing.Point(613, 32);
+            this.cmb_Term.Margin = new System.Windows.Forms.Padding(2);
+            this.cmb_Term.Name = "cmb_Term";
+            this.cmb_Term.Size = new System.Drawing.Size(153, 23);
+            this.cmb_Term.TabIndex = 1;
+            this.cmb_Term.Text = "--请选择学期--";
+            this.cmb_Term.SelectedIndexChanged += new System.EventHandler(this.cmb_Term_SelectedIndexChanged);
+            // 
+            // gv_Book
+            // 
+            this.gv_Book.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gv_Book.Location = new System.Drawing.Point(10, 72);
+            this.gv_Book.Margin = new System.Windows.Forms.Padding(2);
+            this.gv_Book.Name = "gv_Book";
+            this.gv_Book.RowTemplate.Height = 44;
+            this.gv_Book.Size = new System.Drawing.Size(1266, 336);
+            this.gv_Book.TabIndex = 2;
             // 
             // TrainingManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1143, 708);
+            this.ClientSize = new System.Drawing.Size(1645, 723);
             this.Controls.Add(this.tabControlTrainingManagement);
             this.Name = "TrainingManagement";
             this.Text = "培养管理";
@@ -1591,21 +1769,29 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgv_AllCourses)).EndInit();
             this.tabPageStudentPreselectionManagement.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewStudentPreselectionManagement)).EndInit();
+            this.tabPageClassroomLoanApplication.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_ClassroomBorrow)).EndInit();
             this.tabPageTeachingSchedule.ResumeLayout(false);
             this.tabPageTeachingSchedule.PerformLayout();
             this.tabPageStudentStudyStatus.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewStudyStatus)).EndInit();
             this.tabPageTextbookManagement.ResumeLayout(false);
-            this.tabControlTextbookManagement.ResumeLayout(false);
+            this.tabPageMinorManagement.ResumeLayout(false);
+            this.tabPageMinorManagement.PerformLayout();
+            this.tabPageTextbookSubscription.ResumeLayout(false);
+            this.tabPageTeachingMaterialAccountInformation.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAccountingInformation)).EndInit();
             this.tabPageStudentTextbookSelection.ResumeLayout(false);
             this.tabPageStudentTextbookSelection.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTextbookSelection)).EndInit();
-            this.tabPageTeachingMaterialAccountInformation.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAccountingInformation)).EndInit();
-            this.tabPageTextbookSubscription.ResumeLayout(false);
-            this.tabPageTextbookSubscription.PerformLayout();
-            this.tabPageMinorManagement.ResumeLayout(false);
-            this.tabPageMinorManagement.PerformLayout();
+            this.tabControlTextbookManagement.ResumeLayout(false);
+            this.gpb_Record.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.gv_Record)).EndInit();
+            this.gpb_BookPurchase.ResumeLayout(false);
+            this.gpb_BookPurchase.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gv_Book)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1633,10 +1819,6 @@
         private System.Windows.Forms.TabPage tabPageTeachingSchedule;
         private System.Windows.Forms.TabPage tabPageSummaryOfTeachingProgress;
         private System.Windows.Forms.TabPage tabPageStudentStudyStatus;
-        private System.Windows.Forms.TabControl tabControlTextbookManagement;
-        private System.Windows.Forms.TabPage tabPageStudentTextbookSelection;
-        private System.Windows.Forms.TabPage tabPageTeachingMaterialAccountInformation;
-        private System.Windows.Forms.TabPage tabPageTextbookSubscription;
         private System.Windows.Forms.DataGridView dataGridViewGuideTrainingProgram;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnSerialNumber;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnSemester;
@@ -1711,8 +1893,27 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column_SerialNumber;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnCourseNature;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnGettingCredit;
+        private System.Windows.Forms.Button button___Search;
+        private System.Windows.Forms.Label labelMinorGradeMark;
+        private System.Windows.Forms.Label labelMinorSchoolMark;
+        private System.Windows.Forms.ComboBox comboBox5;
+        private System.Windows.Forms.ComboBox comboBox4;
+        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.Label labelMinor;
+        private System.Windows.Forms.Label labelMinorGrade;
+        private System.Windows.Forms.Label labelMinorSchool;
+        private System.Windows.Forms.DataGridView dgv_SelectedCourse;
+        private System.Windows.Forms.DataGridView dgv_AllCourses;
+        private System.Windows.Forms.Button btn_DropClass;
+        private System.Windows.Forms.Button btn_SelectCoures;
+        private System.Windows.Forms.DataGridView dgv_ClassroomBorrow;
+        private System.Windows.Forms.Label lbl_ClassroomBorrow;
+        private System.Windows.Forms.Button btn_ClassroomBorrow;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.TabControl tabControlTextbookManagement;
+        private System.Windows.Forms.TabPage tabPageStudentTextbookSelection;
         private System.Windows.Forms.DataGridView dataGridViewTextbookSelection;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnSelectedTeachers;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnInstructor;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column_CourseTitle;
@@ -1724,6 +1925,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnPublishingHouse;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnEdition;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column_Operation;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TabPage tabPageTeachingMaterialAccountInformation;
         private System.Windows.Forms.DataGridView dataGridViewAccountingInformation;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column__Term;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column__CourseTitle;
@@ -1738,22 +1941,19 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnTheWay;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnRemarks;
-        private System.Windows.Forms.Button button__Search;
-        private System.Windows.Forms.Label label__TermMark;
-        private System.Windows.Forms.ComboBox comboBox_Term;
-        private System.Windows.Forms.Label label__Term;
-        private System.Windows.Forms.Button button___Search;
-        private System.Windows.Forms.Label labelMinorGradeMark;
-        private System.Windows.Forms.Label labelMinorSchoolMark;
-        private System.Windows.Forms.ComboBox comboBox5;
-        private System.Windows.Forms.ComboBox comboBox4;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.Label labelMinor;
-        private System.Windows.Forms.Label labelMinorGrade;
-        private System.Windows.Forms.Label labelMinorSchool;
-        private System.Windows.Forms.DataGridView dgv_SelectedCourse;
-        private System.Windows.Forms.DataGridView dgv_AllCourses;
-        private System.Windows.Forms.Button btn_DropClass;
-        private System.Windows.Forms.Button btn_SelectCoures;
+        private System.Windows.Forms.TabPage tabPageTextbookSubscription;
+        private System.Windows.Forms.Button btn_Record;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.GroupBox gpb_BookPurchase;
+        private System.Windows.Forms.Button btn_Find;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btn_Purchase;
+        private System.Windows.Forms.ComboBox cmb_Term;
+        private System.Windows.Forms.DataGridView gv_Book;
+        private System.Windows.Forms.GroupBox gpb_Record;
+        private System.Windows.Forms.Button btn_CancelAll;
+        private System.Windows.Forms.Button btn_cancel;
+        private System.Windows.Forms.DataGridView gv_Record;
+        private System.Windows.Forms.Button btn_BookPurchase;
     }
 }

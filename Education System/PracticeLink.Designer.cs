@@ -85,6 +85,7 @@
             this.ColumnGroupName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnScheduleWeek = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnArrangeTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tabPageBorrowClassroom = new System.Windows.Forms.TabPage();
             this.tabControlPracticeLink.SuspendLayout();
             this.tabPagePracticalTeaching.SuspendLayout();
             this.tabControlPracticalTeaching.SuspendLayout();
@@ -107,6 +108,7 @@
             this.tabControlPracticeLink.Controls.Add(this.tabPagePracticalTeaching);
             this.tabControlPracticeLink.Controls.Add(this.tabPageInnovationCredits);
             this.tabControlPracticeLink.Controls.Add(this.tabPageInternshipManagement);
+            this.tabControlPracticeLink.Controls.Add(this.tabPageBorrowClassroom);
             this.tabControlPracticeLink.Location = new System.Drawing.Point(3, 4);
             this.tabControlPracticeLink.Name = "tabControlPracticeLink";
             this.tabControlPracticeLink.SelectedIndex = 0;
@@ -556,6 +558,15 @@
             this.ColumnArrangeTime.HeaderText = "安排时间";
             this.ColumnArrangeTime.Name = "ColumnArrangeTime";
             // 
+            // tabPageBorrowClassroom
+            // 
+            this.tabPageBorrowClassroom.Location = new System.Drawing.Point(4, 25);
+            this.tabPageBorrowClassroom.Name = "tabPageBorrowClassroom";
+            this.tabPageBorrowClassroom.Size = new System.Drawing.Size(789, 417);
+            this.tabPageBorrowClassroom.TabIndex = 3;
+            this.tabPageBorrowClassroom.Text = "教室借用";
+            this.tabPageBorrowClassroom.UseVisualStyleBackColor = true;
+            // 
             // PracticeLink
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -644,5 +655,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnGroupName;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnScheduleWeek;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnArrangeTime;
+        private System.Windows.Forms.TabPage tabPageBorrowClassroom;
     }
 }

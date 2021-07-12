@@ -106,8 +106,9 @@
             this.dgv_Announcement.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_Announcement.Location = new System.Drawing.Point(0, 0);
             this.dgv_Announcement.Name = "dgv_Announcement";
+            this.dgv_Announcement.ReadOnly = true;
             this.dgv_Announcement.RowTemplate.Height = 27;
-            this.dgv_Announcement.Size = new System.Drawing.Size(768, 404);
+            this.dgv_Announcement.Size = new System.Drawing.Size(765, 404);
             this.dgv_Announcement.TabIndex = 0;
             this.dgv_Announcement.DoubleClick += new System.EventHandler(this.dgv_Announcement_DoubleClick);
             // 
@@ -127,8 +128,9 @@
             this.dgv_Message.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgv_Message.Location = new System.Drawing.Point(0, 0);
             this.dgv_Message.Name = "dgv_Message";
+            this.dgv_Message.ReadOnly = true;
             this.dgv_Message.RowTemplate.Height = 27;
-            this.dgv_Message.Size = new System.Drawing.Size(768, 407);
+            this.dgv_Message.Size = new System.Drawing.Size(765, 404);
             this.dgv_Message.TabIndex = 0;
             this.dgv_Message.DoubleClick += new System.EventHandler(this.dgv_Message_DoubleClick);
             // 
@@ -434,6 +436,7 @@
             this.Controls.Add(this.tabControlDesktop);
             this.Name = "DesktopForm";
             this.Text = "我的桌面";
+            this.Load += new System.EventHandler(this.DesktopForm_Load);
             this.tabControlDesktop.ResumeLayout(false);
             this.tabPage_Announce.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Announcement)).EndInit();

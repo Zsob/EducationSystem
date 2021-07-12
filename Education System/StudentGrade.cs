@@ -40,7 +40,7 @@ namespace Education_System
                 comboBox_Class.SelectedItem= sqlHelper["Class"].ToString();
             }
             //课程成绩查询
-            sqlHelper.QuickRead($@"SELECT * FROM dbo.vw_StudentScore WHERE StudentNo='{Student.newStudent.StudentNo}'AND TotalScore IS NOT NULL");
+            sqlHelper.QuickRead($@"SELECT * FROM dbo.tb_StudentScore WHERE StudentNo='{Student.newStudent.StudentNo}'AND TotalScore IS NOT NULL");
             while (sqlHelper.HasRecord)
             {
                 comboBox_StartTime.Items.Add(sqlHelper["Term"].ToString());
@@ -92,14 +92,34 @@ namespace Education_System
 
         private void buttonInquire_Click(object sender, EventArgs e)
         {
-            string commandText= $@"SELECT Term,CourseName AS 课程名称  
+            int result=sqlHelper.QuickReturn<int>($@"SELECT COUNT(1)
+                                                FROM dbo.tb_StudentScore
+                                                WHERE StudentNo = '3190707011' AND TotalScore IS NOT NULL AND FacultyRate IS NULL AND BeginningTime<GETDATE() AND EndingTime>GETDATE()");
+            if(result>0)
+            {
+                MessageBox.Show("请先完成评教！");
+                return;
+            }
+            string commandText= $@"SELECT Term AS 学期,CourseName AS 课程名称  
 		                        ,BasicScore AS 平时成绩 
 		                        ,FinalScore AS 期末成绩 
 		                        ,TotalScore AS 总成绩 
-                                FROM dbo.vw_StudentScore WHERE StudentNo = '3190707011' AND TotalScore IS NOT NULL";
+                                FROM dbo.tb_StudentScore WHERE StudentNo = '3190707011' AND TotalScore IS NOT NULL";
             if (comboBox_StartTime.SelectedIndex!=-1)
             {
-                commandText = commandText + $@"And Term='{comboBox_StartTime.SelectedItem.ToString()}";
+                commandText = $@"SELECT Term AS 学期,CourseName AS 课程名称  
+		                        ,BasicScore AS 平时成绩 
+		                        ,FinalScore AS 期末成绩 
+		                        ,TotalScore AS 总成绩 
+                                FROM dbo.tb_StudentScore WHERE StudentNo = '3190707011' AND TotalScore IS NOT NULL AND Term='{comboBox_StartTime.SelectedItem.ToString()}'";
+            }
+            if (comboBox_CourseNature.SelectedIndex!=-1)
+            {
+                commandText += $@"AND CourseType='{comboBox_CourseNature.SelectedItem.ToString()}'";
+            }
+            if (textBox_CourseName.Text!="")
+            {
+                commandText += $@"AND CourseName='{textBox_CourseName.Text}'";
             }
             DataForm data = new DataForm(commandText);
             data.Show();

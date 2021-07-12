@@ -64,7 +64,14 @@ namespace Education_System
         private void btn_LogIn_Click(object sender, EventArgs e)
         {
             LogIn logIn = new LogIn();
+            
             logIn.Show();
+            logIn.FormClosed += LogIn_FormClosed;
+        }
+
+        private void LogIn_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            FormLoad();
         }
 
         private void btn_Refresh_Click(object sender, EventArgs e)
@@ -86,14 +93,12 @@ namespace Education_System
             bt_Desktop.Enabled = bt_Evaluation.Enabled = bt_ExamRegistration.Enabled = bt_Grade.Enabled = bt_Management.Enabled = bt_Practice.Enabled = btn_LogOut.Enabled = false;
         }
 
-        private void Form_System_MouseMove(object sender, MouseEventArgs e)
+        private void Form_System_MouseDown(object sender, MouseEventArgs e)
         {
-            
-            
-
+            FormLoad();
         }
 
-        private void Form_System_MouseDown(object sender, MouseEventArgs e)
+        private void FormLoad()
         {
             textBox_Acountment.Text = Student.newStudent.StudentNo;
             if (textBox_Acountment.Text == "未登录")
@@ -109,14 +114,14 @@ namespace Education_System
                     $@"SELECT * FROM dbo.tb_StudentInformation WHERE StudentID='{textBox_Acountment.Text}'";
                 SqlHelper sqlHelper = new SqlHelper();
                 sqlHelper.QuickRead(commandText);
-                
+
                 if (sqlHelper.HasRecord)
                 {
                     lbl_BirthdayFill.Text = ((DateTime)sqlHelper["Birthday"]).ToLongDateString().ToString();
                     lbl_GenderFill.Text = sqlHelper["Gender"].ToString();
                     lbl_NameFill.Text = sqlHelper["StudentName"].ToString();
                     lbl_PhoneFill.Text = sqlHelper["Phone"].ToString();
-                    
+
                 }
             }
         }

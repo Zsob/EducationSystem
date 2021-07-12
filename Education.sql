@@ -208,3 +208,71 @@ WHERE StudentID='3190707011'
 SELECT *
 FROM dbo.tb_StudentInformation
 WHERE StudentID=''
+
+
+SELECT
+ E.ExamNo AS 考试编号,E.ExamName AS 考试名称,IIF(EE.StudentNo IS NOT NULL,'已报名','未报名') AS 状态
+ FROM dbo.tb_Exam AS E LEFT JOIN dbo.tb_ExamEnroll AS EE ON E.ExamNo=EE.ExamNo AND EE.StudentNo='3190707011'
+
+ SELECT DISTINCT CourseName
+ FROM dbo.vw_StudentScore
+ WHERE Class='17信管'
+
+ INSERT dbo.tb_ExamEnroll (StudentNo,ExamNo ) VALUES('3190707011', 'A0002')
+
+ DELETE dbo.tb_ExamEnroll
+ WHERE StudentNo='' AND ExamNo=''
+
+ SELECT *
+ FROM dbo.tb_ExamEnroll
+
+SELECT Term,CourseName AS 课程名称  
+		                        ,BasicScore AS 平时成绩 
+		                        ,FinalScore AS 期末成绩 
+		                        ,TotalScore AS 总成绩 
+                                FROM dbo.vw_StudentScore WHERE StudentNo = '3190707011' AND TotalScore IS NOT NULL 
+
+SELECT *
+FROM dbo.tb_MessageRecord
+
+SELECT
+                        		A.AnnouncementID AS 通知编号
+		                        ,A.AnnouncementTitle AS 通知标题
+		                        ,A.Announcement AS 通知内容
+								,ISNULL(MR.Reply,'无') AS 回复
+		                        ,IIF(MR.StudentNo IS NULL,'未读','已读') AS 状态
+		                        FROM dbo.tb_Announcement AS A  LEFT JOIN dbo.tb_MessageRecord AS MR ON A.AnnouncementID=MR.ID AND MR.StudentNo='3190707011'
+
+SELECT *
+FROM dbo.tb_Announcement
+SELECT *
+FROM dbo.tb_Message
+
+UPDATE dbo.tb_MessageRecord
+SET Reply=''
+WHERE StudentNo='' AND ID=''
+
+SELECT *
+FROM dbo.tb_Exam
+WHERE MONTH(Time)>MONTH(GETDATE())-2
+
+SELECT
+                                 E.ExamNo AS 考试编号,E.ExamName AS 考试名称,IIF(EE.StudentNo IS NOT NULL,'已报名','未报名') AS 状态
+                                 FROM dbo.tb_Exam AS E LEFT JOIN dbo.tb_ExamEnroll AS EE ON E.ExamNo=EE.ExamNo AND EE.StudentNo='3190707011'
+								 WHERE MONTH(E.Time)>MONTH(GETDATE())-2
+
+SELECT
+	Classroom AS 教室
+	,IIF(Monday IS NOT NULL,IIF(Monday='3190707011','√',IIF(Monday='0','●','▲')),'') AS 星期一
+	,IIF(Tuesday IS NOT NULL,IIF(Tuesday='3190707011','√',IIF(Tuesday='0','●','▲')),'') AS 星期二
+	,IIF(Wednesday IS NOT NULL,IIF(Wednesday='3190707011','√',IIF(Wednesday='0','●','▲')),'') AS 星期三
+	,IIF(Thursday IS NOT NULL,IIF(Thursday='3190707011','√',IIF(Thursday='0','●','▲')),'') AS 星期四
+	,IIF(Friday IS NOT NULL,IIF(Friday='3190707011','√',IIF(Friday='0','●','▲')),'') AS 星期五
+FROM dbo.tb_ClassroomBorrow
+
+SELECT *
+FROM dbo.tb_ClassroomBorrow
+
+UPDATE dbo.tb_ClassroomBorrow
+SET Monday=NULL
+WHERE Classroom='1110'

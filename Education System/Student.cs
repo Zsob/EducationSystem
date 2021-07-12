@@ -9,17 +9,11 @@ namespace Education_System
     class Student
     {
         public string StudentNo;
-        public string Name;
-        public string Password;
-        public string FirstQuestion;
-        public string SecondQuestion;
-        public string FirstAnswer;
-        public string SecondAnswer;
         public Student(string StudentNo)
         {
             this.StudentNo = StudentNo;
         }
-        //public static Student newStudent = new Student("未登录");
-        public static Student newStudent = new Student("3190707011");
+        public static Student newStudent = new Student("未登录");
+        //public static Student newStudent = new Student("3190707011");
     }
 }
